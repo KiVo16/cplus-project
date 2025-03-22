@@ -1,0 +1,72 @@
+\doxysection{Recursive\+Backtracker Class Reference}
+\hypertarget{class_recursive_backtracker}{}\label{class_recursive_backtracker}\index{RecursiveBacktracker@{RecursiveBacktracker}}
+
+
+Inheritance diagram for Recursive\+Backtracker\+:
+% FIG 0
+
+
+Collaboration diagram for Recursive\+Backtracker\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_recursive_backtracker_a2d53774ca383f0c28f11d3c6794442d5}\label{class_recursive_backtracker_a2d53774ca383f0c28f11d3c6794442d5} 
+{\bfseries Recursive\+Backtracker} (int rows, int cols)
+\item 
+bool \mbox{\hyperlink{class_recursive_backtracker_a6d0a1073c4ef59a3853dc36c3579269d}{step}} () override
+\item 
+QPoint \mbox{\hyperlink{class_recursive_backtracker_ac2321942912a8021ce16c5e28a618ffb}{get\+Current\+Cell}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_maze_generator}{Maze\+Generator}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Maze\+Generator} (int rows, int cols)
+\item 
+bool {\bfseries is\+Finished} () const
+\item 
+const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{struct_cell}{Cell}} $>$ $>$ \& {\bfseries get\+Maze} () const
+\item 
+std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{struct_cell}{Cell}} $>$ $>$ \& {\bfseries get\+Maze\+Ref} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_maze_generator}{Maze\+Generator}}}
+\begin{DoxyCompactItemize}
+\item 
+int {\bfseries rows}
+\item 
+int {\bfseries cols}
+\item 
+bool {\bfseries finished}
+\item 
+std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{struct_cell}{Cell}} $>$ $>$ {\bfseries maze}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_recursive_backtracker_ac2321942912a8021ce16c5e28a618ffb}\index{RecursiveBacktracker@{RecursiveBacktracker}!getCurrentCell@{getCurrentCell}}
+\index{getCurrentCell@{getCurrentCell}!RecursiveBacktracker@{RecursiveBacktracker}}
+\doxysubsubsection{\texorpdfstring{getCurrentCell()}{getCurrentCell()}}
+{\footnotesize\ttfamily \label{class_recursive_backtracker_ac2321942912a8021ce16c5e28a618ffb} 
+QPoint Recursive\+Backtracker\+::get\+Current\+Cell (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_maze_generator}{Maze\+Generator}}.
+
+\Hypertarget{class_recursive_backtracker_a6d0a1073c4ef59a3853dc36c3579269d}\index{RecursiveBacktracker@{RecursiveBacktracker}!step@{step}}
+\index{step@{step}!RecursiveBacktracker@{RecursiveBacktracker}}
+\doxysubsubsection{\texorpdfstring{step()}{step()}}
+{\footnotesize\ttfamily \label{class_recursive_backtracker_a6d0a1073c4ef59a3853dc36c3579269d} 
+bool Recursive\+Backtracker\+::step (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_maze_generator}{Maze\+Generator}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Recursive\+Backtracker.\+h\item 
+Recursive\+Backtracker.\+cpp\end{DoxyCompactItemize}

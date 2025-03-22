@@ -1,0 +1,124 @@
+\doxysection{Flood\+Fill\+Micromouse\+Controller Class Reference}
+\hypertarget{class_flood_fill_micromouse_controller}{}\label{class_flood_fill_micromouse_controller}\index{FloodFillMicromouseController@{FloodFillMicromouseController}}
+
+
+Inheritance diagram for Flood\+Fill\+Micromouse\+Controller\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{class_flood_fill_micromouse_controller__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Flood\+Fill\+Micromouse\+Controller\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{class_flood_fill_micromouse_controller__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_flood_fill_micromouse_controller_a8be93b09027ad1f38c060e6f29b5f61c}{setup}} (const Maze \&m, const QPoint \&start, const QPoint \&goal) override
+\item 
+void \mbox{\hyperlink{class_flood_fill_micromouse_controller_afc53f08a5f16fd9123ca9ae9b4494fdf}{start}} () override
+\item 
+void \mbox{\hyperlink{class_flood_fill_micromouse_controller_a817374ef624db8743f5e55d24d630192}{stop}} () override
+\item 
+void \mbox{\hyperlink{class_flood_fill_micromouse_controller_af4b671c551adf8ac42b2aadb75825c6b}{update}} () override
+\item 
+QPoint \mbox{\hyperlink{class_flood_fill_micromouse_controller_a18bd4cae2c3f8efb56b0cf85b5e1aecb}{current\+Position}} () const override
+\item 
+int \mbox{\hyperlink{class_flood_fill_micromouse_controller_a94294bccba59c0da940cc62abc7ddee5}{current\+Orientation}} () const override
+\item 
+std\+::vector$<$ \mbox{\hyperlink{struct_micrmouse_step}{Micrmouse\+Step}} $>$ \mbox{\hyperlink{class_flood_fill_micromouse_controller_a468a0fa8020afb908dd61bcb711c1ca9}{path}} () const override
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Public Attributes inherited from \mbox{\hyperlink{class_micromouse_controller}{Micromouse\+Controller}}}
+\begin{DoxyCompactItemize}
+\item 
+bool {\bfseries is\+Finished} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_flood_fill_micromouse_controller_a94294bccba59c0da940cc62abc7ddee5}\index{FloodFillMicromouseController@{FloodFillMicromouseController}!currentOrientation@{currentOrientation}}
+\index{currentOrientation@{currentOrientation}!FloodFillMicromouseController@{FloodFillMicromouseController}}
+\doxysubsubsection{\texorpdfstring{currentOrientation()}{currentOrientation()}}
+{\footnotesize\ttfamily \label{class_flood_fill_micromouse_controller_a94294bccba59c0da940cc62abc7ddee5} 
+int Flood\+Fill\+Micromouse\+Controller\+::current\+Orientation (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_micromouse_controller}{Micromouse\+Controller}}.
+
+\Hypertarget{class_flood_fill_micromouse_controller_a18bd4cae2c3f8efb56b0cf85b5e1aecb}\index{FloodFillMicromouseController@{FloodFillMicromouseController}!currentPosition@{currentPosition}}
+\index{currentPosition@{currentPosition}!FloodFillMicromouseController@{FloodFillMicromouseController}}
+\doxysubsubsection{\texorpdfstring{currentPosition()}{currentPosition()}}
+{\footnotesize\ttfamily \label{class_flood_fill_micromouse_controller_a18bd4cae2c3f8efb56b0cf85b5e1aecb} 
+QPoint Flood\+Fill\+Micromouse\+Controller\+::current\+Position (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_micromouse_controller}{Micromouse\+Controller}}.
+
+\Hypertarget{class_flood_fill_micromouse_controller_a468a0fa8020afb908dd61bcb711c1ca9}\index{FloodFillMicromouseController@{FloodFillMicromouseController}!path@{path}}
+\index{path@{path}!FloodFillMicromouseController@{FloodFillMicromouseController}}
+\doxysubsubsection{\texorpdfstring{path()}{path()}}
+{\footnotesize\ttfamily \label{class_flood_fill_micromouse_controller_a468a0fa8020afb908dd61bcb711c1ca9} 
+std\+::vector$<$ \mbox{\hyperlink{struct_micrmouse_step}{Micrmouse\+Step}} $>$ Flood\+Fill\+Micromouse\+Controller\+::path (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_micromouse_controller}{Micromouse\+Controller}}.
+
+\Hypertarget{class_flood_fill_micromouse_controller_a8be93b09027ad1f38c060e6f29b5f61c}\index{FloodFillMicromouseController@{FloodFillMicromouseController}!setup@{setup}}
+\index{setup@{setup}!FloodFillMicromouseController@{FloodFillMicromouseController}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily \label{class_flood_fill_micromouse_controller_a8be93b09027ad1f38c060e6f29b5f61c} 
+void Flood\+Fill\+Micromouse\+Controller\+::setup (\begin{DoxyParamCaption}\item[{const Maze \&}]{m}{, }\item[{const QPoint \&}]{start}{, }\item[{const QPoint \&}]{goal}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_micromouse_controller}{Micromouse\+Controller}}.
+
+\Hypertarget{class_flood_fill_micromouse_controller_afc53f08a5f16fd9123ca9ae9b4494fdf}\index{FloodFillMicromouseController@{FloodFillMicromouseController}!start@{start}}
+\index{start@{start}!FloodFillMicromouseController@{FloodFillMicromouseController}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily \label{class_flood_fill_micromouse_controller_afc53f08a5f16fd9123ca9ae9b4494fdf} 
+void Flood\+Fill\+Micromouse\+Controller\+::start (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_micromouse_controller}{Micromouse\+Controller}}.
+
+\Hypertarget{class_flood_fill_micromouse_controller_a817374ef624db8743f5e55d24d630192}\index{FloodFillMicromouseController@{FloodFillMicromouseController}!stop@{stop}}
+\index{stop@{stop}!FloodFillMicromouseController@{FloodFillMicromouseController}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily \label{class_flood_fill_micromouse_controller_a817374ef624db8743f5e55d24d630192} 
+void Flood\+Fill\+Micromouse\+Controller\+::stop (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_micromouse_controller}{Micromouse\+Controller}}.
+
+\Hypertarget{class_flood_fill_micromouse_controller_af4b671c551adf8ac42b2aadb75825c6b}\index{FloodFillMicromouseController@{FloodFillMicromouseController}!update@{update}}
+\index{update@{update}!FloodFillMicromouseController@{FloodFillMicromouseController}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_flood_fill_micromouse_controller_af4b671c551adf8ac42b2aadb75825c6b} 
+void Flood\+Fill\+Micromouse\+Controller\+::update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{class_micromouse_controller}{Micromouse\+Controller}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Flood\+Fill\+Micromouse\+Controller.\+h\item 
+Flood\+Fill\+Micromouse\+Controller.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,58 @@
+\doxysection{Maze\+Visualizer.\+h}
+\hypertarget{_maze_visualizer_8h_source}{}\label{_maze_visualizer_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ Jakub\ Kurek\ on\ 20/03/2025.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ MAZEVISUALIZER\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ MAZEVISUALIZER\_H}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <QWidget>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <QGraphicsScene>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}MazeGenerator.h"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <QTimer>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <QPoint>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}MicromouseController.h"{}}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{enum\ class}\ SolutionPoint\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ TOP\_LEFT,}
+\DoxyCodeLine{00019\ \ \ \ \ TOP\_RIGHT,}
+\DoxyCodeLine{00020\ \ \ \ \ BOTTOM\_LEFT,}
+\DoxyCodeLine{00021\ \ \ \ \ BOTTOM\_RIGHT,}
+\DoxyCodeLine{00022\ \ \ \ \ CENTER}
+\DoxyCodeLine{00023\ \};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{class\ }MazeVisualizer\ :\ \textcolor{keyword}{public}\ QWidget\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00027\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{explicit}\ MazeVisualizer(QWidget\ *parent);}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ startMazeGeneration(\mbox{\hyperlink{class_maze_generator}{MazeGenerator}}*\ mazeGenerator,\ SolutionPoint\ point);}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ startMicromouse(\mbox{\hyperlink{class_micromouse_controller}{MicromouseController}}*\ micromouseController);}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ drawMaze();}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ updateMaze();}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ skipMazeGenerationVisualisation();}
+\DoxyCodeLine{00034\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00035\ \ \ \ \ QGraphicsScene\ *scene;}
+\DoxyCodeLine{00036\ \ \ \ \ QTimer\ *timerMaze;}
+\DoxyCodeLine{00037\ \ \ \ \ QTimer\ *timer;}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{int}\ cellSize;}
+\DoxyCodeLine{00039\ \ \ \ \ QPen\ wallPen;}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ QPoint\ startPoint;}
+\DoxyCodeLine{00042\ \ \ \ \ QPoint\ solutionPoint;}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{class_maze_generator}{MazeGenerator}}\ *mazeGenerator;}
+\DoxyCodeLine{00045\ \ \ \ \ \mbox{\hyperlink{class_micromouse_controller}{MicromouseController}}\ *micromouseController;}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ setupStartEndPoint(SolutionPoint\ point);}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ signals:}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ generationFinished();}
+\DoxyCodeLine{00051\ \};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//MAZEVISUALIZER\_H}}
+
+\end{DoxyCode}

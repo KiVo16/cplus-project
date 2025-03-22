@@ -1,0 +1,5 @@
+/Users/jk/CLionProjects/untitled6/cmake-build-debug/CMakeFiles/untitled6.dir
+/Users/jk/CLionProjects/untitled6/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/jk/CLionProjects/untitled6/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/jk/CLionProjects/untitled6/cmake-build-debug/CMakeFiles/untitled6_autogen_timestamp_deps.dir
+/Users/jk/CLionProjects/untitled6/cmake-build-debug/CMakeFiles/untitled6_autogen.dir

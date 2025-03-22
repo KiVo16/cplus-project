@@ -1,0 +1,53 @@
+\doxysection{Maze\+Generator Class Reference}
+\hypertarget{class_maze_generator}{}\label{class_maze_generator}\index{MazeGenerator@{MazeGenerator}}
+
+
+Inheritance diagram for Maze\+Generator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_maze_generator__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_maze_generator_aa813ec20dbaf33d002b1aa0fe5814528}\label{class_maze_generator_aa813ec20dbaf33d002b1aa0fe5814528} 
+{\bfseries Maze\+Generator} (int rows, int cols)
+\item 
+\Hypertarget{class_maze_generator_a7f9a72d72c5aae842c968fcbf360f2ff}\label{class_maze_generator_a7f9a72d72c5aae842c968fcbf360f2ff} 
+virtual bool {\bfseries step} ()=0
+\item 
+\Hypertarget{class_maze_generator_a1ba9f69d1fd67d55ee5a19e548ed3831}\label{class_maze_generator_a1ba9f69d1fd67d55ee5a19e548ed3831} 
+bool {\bfseries is\+Finished} () const
+\item 
+\Hypertarget{class_maze_generator_a5d89745770e8b040f2c4cab3b661cfaf}\label{class_maze_generator_a5d89745770e8b040f2c4cab3b661cfaf} 
+const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{struct_cell}{Cell}} $>$ $>$ \& {\bfseries get\+Maze} () const
+\item 
+\Hypertarget{class_maze_generator_ad7657b85a92686648e6005f4897b979f}\label{class_maze_generator_ad7657b85a92686648e6005f4897b979f} 
+std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{struct_cell}{Cell}} $>$ $>$ \& {\bfseries get\+Maze\+Ref} ()
+\item 
+\Hypertarget{class_maze_generator_a662c6a8f95fd7364f23cdde14f6d65a4}\label{class_maze_generator_a662c6a8f95fd7364f23cdde14f6d65a4} 
+virtual QPoint {\bfseries get\+Current\+Cell} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_maze_generator_aaf088c4b6bd5afd01b01991108e1c065}\label{class_maze_generator_aaf088c4b6bd5afd01b01991108e1c065} 
+int {\bfseries rows}
+\item 
+\Hypertarget{class_maze_generator_a37e25a5b57139067262cfbcf495d71ab}\label{class_maze_generator_a37e25a5b57139067262cfbcf495d71ab} 
+int {\bfseries cols}
+\item 
+\Hypertarget{class_maze_generator_ae4684e1c8fa59bd079471899729d45bc}\label{class_maze_generator_ae4684e1c8fa59bd079471899729d45bc} 
+bool {\bfseries finished}
+\item 
+\Hypertarget{class_maze_generator_a286f42af512cbfe942e073e2986027b8}\label{class_maze_generator_a286f42af512cbfe942e073e2986027b8} 
+std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{struct_cell}{Cell}} $>$ $>$ {\bfseries maze}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Maze\+Generator.\+h\end{DoxyCompactItemize}

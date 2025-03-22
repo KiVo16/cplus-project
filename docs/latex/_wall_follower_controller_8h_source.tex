@@ -1,0 +1,44 @@
+\doxysection{Wall\+Follower\+Controller.\+h}
+\hypertarget{_wall_follower_controller_8h_source}{}\label{_wall_follower_controller_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ Jakub\ Kurek\ on\ 21/03/2025.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ WALLFOLLOWERCONTROLLER\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ WALLFOLLOWERCONTROLLER\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <qmetatype.h>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <qobjectdefs.h>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <QPoint>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <qtmetamacros.h>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}MazeGenerator.h"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}MicromouseController.h"{}}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }WallFollowerController\ :\ \textcolor{keyword}{public}\ MicromouseController\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{explicit}\ WallFollowerController();}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ setup(\textcolor{keyword}{const}\ Maze\ \&m,\ \textcolor{keyword}{const}\ QPoint\ \&start,\ \textcolor{keyword}{const}\ QPoint\ \&goal)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ start()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ stop()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ update()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00023\ \ \ \ \ QPoint\ currentPosition()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{int}\ currentOrientation()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00025\ \ \ \ \ std::vector<MicrmouseStep>\ path()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00026\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00027\ \ \ \ \ Maze\ maze;}
+\DoxyCodeLine{00028\ \ \ \ \ QPoint\ pos;}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{int}\ orientation;\ \textcolor{comment}{//\ 0=North,1=East,2=South,3=West}}
+\DoxyCodeLine{00030\ \ \ \ \ std::vector<MicrmouseStep>\ pathTaken;}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{bool}\ running;}
+\DoxyCodeLine{00032\ \ \ \ \ QPoint\ goal;}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{bool}\ isSetup\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{comment}{//\ Two-\/sided\ check}}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{bool}\ canMove(\textcolor{keywordtype}{int}\ fromR,\ \textcolor{keywordtype}{int}\ fromC,\ \textcolor{keywordtype}{int}\ toR,\ \textcolor{keywordtype}{int}\ toC);}
+\DoxyCodeLine{00037\ \};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//WALLFOLLOWERCONTROLLER\_H}}
+
+\end{DoxyCode}

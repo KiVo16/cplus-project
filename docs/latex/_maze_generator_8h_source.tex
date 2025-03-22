@@ -1,0 +1,58 @@
+\doxysection{Maze\+Generator.\+h}
+\hypertarget{_maze_generator_8h_source}{}\label{_maze_generator_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{comment}{//}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ Created\ by\ Jakub\ Kurek\ on\ 20/03/2025.}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ MAZEGENERATOR\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ MAZEGENERATOR\_H}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <QPoint>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ Directions:\ 0\ =\ North,\ 1\ =\ East,\ 2\ =\ South,\ 3\ =\ West.}}
+\DoxyCodeLine{00016\ \textcolor{keyword}{enum}\ Direction\ \{\ UP\ =\ 0,\ RIGHT\ =\ 1,\ DOWN\ =\ 2,\ LEFT\ =\ 3\ \};}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{struct\ }Cell\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{bool}\ visited;}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{bool}\ walls[4];\ \textcolor{comment}{//\ walls[0]=North,\ [1]=East,\ [2]=South,\ [3]=West.}}
+\DoxyCodeLine{00021\ \ \ \ \ Cell()\ :\ visited(\textcolor{keyword}{false})\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ walls[0]\ =\ walls[1]\ =\ walls[2]\ =\ walls[3]\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00023\ \ \ \ \ \}}
+\DoxyCodeLine{00024\ \};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{typedef}\ std::vector<std::vector<Cell>>\ Maze;}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{class\ }MazeGenerator\ \{}
+\DoxyCodeLine{00029\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00030\ \ \ \ \ MazeGenerator(\textcolor{keywordtype}{int}\ rows,\ \textcolor{keywordtype}{int}\ cols)}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ :\ rows(rows),\ cols(cols),\ finished(\textcolor{keyword}{false})\ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ maze.resize(rows,\ std::vector<Cell>(cols));}
+\DoxyCodeLine{00033\ \ \ \ \ \}}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{virtual}\ \string~MazeGenerator()\ \{\}}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{comment}{//\ Perform\ one\ generation\ step.}}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ step()\ =\ 0;}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{bool}\ isFinished()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ finished;\ \}}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{comment}{//\ Return\ the\ maze\ (2D\ grid\ of\ Cells).}}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{const}\ std::vector<std::vector<Cell>>\&\ getMaze()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ maze;\ \}}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{comment}{//\ Non-\/const\ version\ for\ modification.}}
+\DoxyCodeLine{00041\ \ \ \ \ std::vector<std::vector<Cell>>\&\ getMazeRef()\ \{\ \textcolor{keywordflow}{return}\ maze;\ \}}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{comment}{//\ Optionally,\ return\ the\ current\ cell\ (for\ visualization).}}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{virtual}\ QPoint\ getCurrentCell()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ QPoint(-\/1,\ -\/1);\ \}}
+\DoxyCodeLine{00044\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{int}\ rows,\ cols;}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{bool}\ finished;}
+\DoxyCodeLine{00047\ \ \ \ \ std::vector<std::vector<Cell>>\ maze;}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//MAZEGENERATOR\_H}}
+
+\end{DoxyCode}
