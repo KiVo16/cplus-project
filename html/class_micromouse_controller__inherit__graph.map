@@ -1,7 +1,0 @@
-<map id="MicromouseController" name="MicromouseController">
-<area shape="rect" id="Node000001" title=" " alt="" coords="128,5,277,31"/>
-<area shape="rect" id="Node000002" href="$class_flood_fill_micromouse_controller.html" title=" " alt="" coords="5,79,203,105"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="175,43,122,81,119,76,172,38"/>
-<area shape="rect" id="Node000003" href="$class_wall_follower_controller.html" title=" " alt="" coords="227,79,378,105"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="234,38,287,76,284,81,230,42"/>
-</map>

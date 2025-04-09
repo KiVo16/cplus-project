@@ -2,16 +2,18 @@
 
 #include <iostream>
 #include <QVBoxLayout>
-#include <QTimer>
 
-#include "AldousBroderMazeGenerator.h"
-#include "FloodFillMicromouseController.h"
-#include "RecursiveBacktracker.h"
-#include "PrimsMazeGenerator.h"
-#include "WallFollowerController.h"
+#include "Controller.h"
+#include "MazeGenerator/AldousBroderMazeGenerator.h"
+#include "MazeGenerator/PrimsMazeGenerator.h"
+#include "MazeGenerator/RecursiveBacktracker.h"
+#include "MicromouseController/FloodFillMicromouseController.h"
+#include "MicromouseController/WallFollowerController.h"
+#include "Visualizer/QVisualizer.h"
 
 MainWindow::MainWindow(QWidget *parent) : QWidget(parent) {
-    visualizer = new MazeVisualizer(this);
+    visualizer = new QVisualizer(this);
+    controller = new Controller(visualizer);
 
     mazeAlgoCombo = new QComboBox(this);
     mazeAlgoCombo->addItem("Recursive Backtracker");
@@ -44,7 +46,7 @@ MainWindow::MainWindow(QWidget *parent) : QWidget(parent) {
     startMouseButton->setEnabled(false);
     connect(startMouseButton, &QPushButton::clicked, this, &MainWindow::startMicromouseSimulation);
 
-    QVBoxLayout *layout = new QVBoxLayout(this);
+    auto *layout = new QVBoxLayout(this);
     layout->addWidget(mazeAlgoCombo);
     layout->addWidget(solutionCombo);
     layout->addWidget(mouseAlgoCombo);
@@ -55,15 +57,22 @@ MainWindow::MainWindow(QWidget *parent) : QWidget(parent) {
     layout->addWidget(visualizer);
     setLayout(layout);
 
-    connect(visualizer, &MazeVisualizer::generationFinished, [=]() {
-        skipMazeGenerationVisualizationButton->setVisible(false);
-        startMouseButton->setEnabled(true);
+    controller->signal.connect([this](ControllerSignal s) {
+        switch (s) {
+            case ControllerSignal::MAZE_GENERATION_FINISHED:
+                skipMazeGenerationVisualizationButton->setVisible(false);
+                startMouseButton->setEnabled(true);
+            case ControllerSignal::MICROMOUSE_FINISHED:
+                startMouseButton->setEnabled(true);
+        }
     });
 }
 
-void MainWindow::startMazeGeneration() {
-    int rows = 20, cols = 20;
-    visualizer->startMazeGeneration(determineMazeGenerator(rows, cols), determineSolutionPoint());
+void MainWindow::startMazeGeneration() const {
+    startMouseButton->setEnabled(false);
+    constexpr int rows = 20;
+    constexpr int cols = 20;
+    controller->startMazeGeneration(determineMazeGenerator(rows, cols), determineSolutionPoint());
 
     if (visualizeCheck->isChecked()) {
         skipMazeGenerationVisualizationButton->setVisible(true);
@@ -75,7 +84,7 @@ void MainWindow::startMazeGeneration() {
     skipMazeGenerationVisualizationButton->setVisible(false);
 }
 
-SolutionPoint MainWindow::determineSolutionPoint() {
+SolutionPoint MainWindow::determineSolutionPoint() const {
     QString solChoice = solutionCombo->currentText();
     if (solChoice == "Top Left") return SolutionPoint::TOP_LEFT;
     if (solChoice == "Top Right") return SolutionPoint::TOP_RIGHT;
@@ -84,24 +93,25 @@ SolutionPoint MainWindow::determineSolutionPoint() {
     return SolutionPoint::CENTER;
 }
 
-MazeGenerator *MainWindow::determineMazeGenerator(int rows, int cols) {
+MazeGenerator *MainWindow::determineMazeGenerator(const int rows, const int cols) const {
     QString solChoice = mazeAlgoCombo->currentText();
     if (solChoice == "Recursive Backtracker") return new RecursiveBacktracker(rows, cols);
     if (solChoice == "Prim's Algorithm") return new PrimsMazeGenerator(rows, cols);
     return new AldousBroderMazeGenerator(rows, cols);
 }
 
-MicromouseController *MainWindow::determineMicromouseController() {
+MicromouseController *MainWindow::determineMicromouseController() const {
     QString solChoice = mouseAlgoCombo->currentText();
     if (solChoice == "Left-Hand Rule") return new WallFollowerController();
     if (solChoice == "Flood Fill") return new FloodFillMicromouseController();
+    return new WallFollowerController();
 }
 
 void MainWindow::skipMazeGenerationVisualization() const {
-    visualizer->skipMazeGenerationVisualisation();
+    controller->skipMazeGenerationVisualisation();
     skipMazeGenerationVisualizationButton->setVisible(false);
 }
 
-void MainWindow::startMicromouseSimulation() {
-    visualizer->startMicromouse(determineMicromouseController());
+void MainWindow::startMicromouseSimulation() const {
+    controller->startMicromouse(determineMicromouseController());
 }

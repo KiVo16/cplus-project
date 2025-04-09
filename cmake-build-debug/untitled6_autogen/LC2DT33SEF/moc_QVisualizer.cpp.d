@@ -1,4 +1,4 @@
-/Users/jk/CLionProjects/untitled6/cmake-build-debug/untitled6_autogen/EWIEGA46WW/moc_MazeVisualizer.cpp: /Users/jk/CLionProjects/untitled6/MazeVisualizer.h \
+/Users/jk/CLionProjects/untitled6/cmake-build-debug/untitled6_autogen/LC2DT33SEF/moc_QVisualizer.cpp: /Users/jk/CLionProjects/untitled6/Visualizer/QVisualizer.h \
   /Users/jk/CLionProjects/untitled6/cmake-build-debug/untitled6_autogen/moc_predefs.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/Availability.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h \
@@ -927,8 +927,10 @@
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/stdarg.h \
   /Users/jk/CLionProjects/untitled6/MazeGenerator/MazeGenerator.h \
   /Users/jk/CLionProjects/untitled6/MicromouseController/MicromouseController.h \
+  /Users/jk/CLionProjects/untitled6/MicromouseController/Sensor/LambdaSensor.h \
+  /Users/jk/CLionProjects/untitled6/MicromouseController/Sensor/MicromouseSensor.h \
+  /Users/jk/CLionProjects/untitled6/Visualizer/Visualizer.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Versions/A/Headers/QPoint \
-  /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Versions/A/Headers/QTimer \
   /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Versions/A/Headers/q20functional.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Versions/A/Headers/q20iterator.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Versions/A/Headers/q20memory.h \
@@ -943,7 +945,6 @@
   /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Versions/A/Headers/qatomic.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Versions/A/Headers/qatomic_cxx11.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Versions/A/Headers/qbasicatomic.h \
-  /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Versions/A/Headers/qbasictimer.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Versions/A/Headers/qbindingstorage.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Versions/A/Headers/qbytearray.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Versions/A/Headers/qbytearrayalgorithms.h \
@@ -1034,7 +1035,6 @@
   /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Versions/A/Headers/qtdeprecationmarkers.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Versions/A/Headers/qtenvironmentvariables.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Versions/A/Headers/qtextstream.h \
-  /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Versions/A/Headers/qtimer.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Versions/A/Headers/qtmetamacros.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Versions/A/Headers/qtnoop.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Versions/A/Headers/qtpreprocessorsupport.h \
