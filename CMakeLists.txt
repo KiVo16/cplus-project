@@ -15,24 +15,36 @@ find_package(Qt6 COMPONENTS
   REQUIRED)
 
 add_executable(untitled6 main.cpp
-        MicromouseController.cpp
-        MicromouseController.h
+        MazeGenerator/MazeGenerator.cpp
+        MazeGenerator/MazeGenerator.h
+        MazeGenerator/AldousBroderMazeGenerator.cpp
+        MazeGenerator/AldousBroderMazeGenerator.h
+        MazeGenerator/RecursiveBacktracker.cpp
+        MazeGenerator/RecursiveBacktracker.h
+        MazeGenerator/PrimsMazeGenerator.cpp
+        MazeGenerator/PrimsMazeGenerator.h
+        MicroMouseController/MicromouseController.cpp
+        MicroMouseController/MicromouseController.h
+        MicroMouseController/WallFollowerController.cpp
+        MicroMouseController/WallFollowerController.h
+        MicroMouseController/FloodFillMicromouseController.cpp
+        MicroMouseController/FloodFillMicromouseController.h
+        Visualizer/Visualizer.cpp
+        Visualizer/Visualizer.h
+        Visualizer/QVisualizer.cpp
+        Visualizer/QVisualizer.h
+        Controller.cpp
+        Controller.h
         MainWindow.cpp
         MainWindow.h
-        MazeVisualizer.cpp
-        MazeVisualizer.h
-        MazeGenerator.cpp
-        MazeGenerator.h
-        AldousBroderMazeGenerator.cpp
-        AldousBroderMazeGenerator.h
-        RecursiveBacktracker.cpp
-        RecursiveBacktracker.h
-        PrimsMazeGenerator.cpp
-        PrimsMazeGenerator.h
-        WallFollowerController.cpp
-        WallFollowerController.h
-        FloodFillMicromouseController.cpp
-        FloodFillMicromouseController.h
+        Timer.cpp
+        Timer.h
+        Signal.cpp
+        Signal.h
+        MicromouseController/Sensor/MicromouseSensor.cpp
+        MicromouseController/Sensor/MicromouseSensor.h
+        MicromouseController/Sensor/LambdaSensor.cpp
+        MicromouseController/Sensor/LambdaSensor.h
 )
 target_link_libraries(untitled6
   Qt::Core

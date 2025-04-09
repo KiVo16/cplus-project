@@ -573,6 +573,12 @@
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/view_interface.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__split_buffer \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__std_mbstate_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__stop_token/atomic_unique_lock.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__stop_token/intrusive_list_view.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__stop_token/intrusive_shared_ptr.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__stop_token/stop_source.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__stop_token/stop_state.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__stop_token/stop_token.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__string/char_traits.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__string/constexpr_c_functions.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__string/extern_template_lists.h \
@@ -581,8 +587,12 @@
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__system_error/error_code.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__system_error/error_condition.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__system_error/system_error.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__thread/formatter.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__thread/id.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__thread/jthread.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__thread/poll_with_backoff.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__thread/this_thread.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__thread/thread.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__threading_support \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__tree \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__tuple/make_tuple_types.h \
@@ -823,6 +833,7 @@
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/string.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/string_view \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/system_error \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/thread \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/tuple \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/type_traits \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/typeinfo \
@@ -925,11 +936,16 @@
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/__stdarg_va_list.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/limits.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/stdarg.h \
-  /Users/jk/CLionProjects/untitled6/MazeGenerator.h \
-  /Users/jk/CLionProjects/untitled6/MazeVisualizer.h \
-  /Users/jk/CLionProjects/untitled6/MicromouseController.h \
+  /Users/jk/CLionProjects/untitled6/Controller.h \
+  /Users/jk/CLionProjects/untitled6/MazeGenerator/MazeGenerator.h \
+  /Users/jk/CLionProjects/untitled6/MicromouseController/MicromouseController.h \
+  /Users/jk/CLionProjects/untitled6/MicromouseController/Sensor/LambdaSensor.h \
+  /Users/jk/CLionProjects/untitled6/MicromouseController/Sensor/MicromouseSensor.h \
+  /Users/jk/CLionProjects/untitled6/Signal.h \
+  /Users/jk/CLionProjects/untitled6/Timer.h \
+  /Users/jk/CLionProjects/untitled6/Visualizer/QVisualizer.h \
+  /Users/jk/CLionProjects/untitled6/Visualizer/Visualizer.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Versions/A/Headers/QPoint \
-  /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Versions/A/Headers/QTimer \
   /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Versions/A/Headers/q20functional.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Versions/A/Headers/q20iterator.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Versions/A/Headers/q20memory.h \
@@ -945,7 +961,6 @@
   /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Versions/A/Headers/qatomic.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Versions/A/Headers/qatomic_cxx11.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Versions/A/Headers/qbasicatomic.h \
-  /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Versions/A/Headers/qbasictimer.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Versions/A/Headers/qbindingstorage.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Versions/A/Headers/qbytearray.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Versions/A/Headers/qbytearrayalgorithms.h \
@@ -1038,7 +1053,6 @@
   /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Versions/A/Headers/qtdeprecationmarkers.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Versions/A/Headers/qtenvironmentvariables.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Versions/A/Headers/qtextstream.h \
-  /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Versions/A/Headers/qtimer.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Versions/A/Headers/qtmetamacros.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Versions/A/Headers/qtnoop.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Versions/A/Headers/qtpreprocessorsupport.h \

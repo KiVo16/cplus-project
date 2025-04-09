@@ -6,21 +6,20 @@
 #define MAINWINDOW_H
 
 
-
-
-#include <QWidget>
-#include "MazeVisualizer.h"
-#include "MicromouseController.h"
 #include <QPushButton>
 #include <QComboBox>
 #include <QCheckBox>
+
+#include "Controller.h"
+#include "Visualizer/QVisualizer.h"
 
 class MainWindow : public QWidget {
     Q_OBJECT
 public:
     explicit MainWindow(QWidget *parent = nullptr);
 private:
-    MazeVisualizer *visualizer;
+    Controller *controller;
+    QVisualizer *visualizer;
     QComboBox *mazeAlgoCombo;
     QComboBox *mouseAlgoCombo;
     QComboBox *solutionCombo;
@@ -29,13 +28,13 @@ private:
     QPushButton *skipMazeGenerationVisualizationButton;
     QPushButton *startMouseButton;
 
-    SolutionPoint determineSolutionPoint();
-    MazeGenerator* determineMazeGenerator(int rows, int cols);
-    MicromouseController* determineMicromouseController();
+    SolutionPoint determineSolutionPoint() const;
+    MazeGenerator* determineMazeGenerator(int rows, int cols) const;
+    MicromouseController* determineMicromouseController() const;
 
-    void startMazeGeneration();
+    void startMazeGeneration() const;
     void skipMazeGenerationVisualization() const;
-    void startMicromouseSimulation();
+    void startMicromouseSimulation() const;
 };
 
 #endif //MAINWINDOW_H

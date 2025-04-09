@@ -352,15 +352,9 @@
 	"HEADERS" : 
 	[
 		[
-			"/Users/jk/CLionProjects/untitled6/AldousBroderMazeGenerator.h",
+			"/Users/jk/CLionProjects/untitled6/Controller.h",
 			"MU",
-			"EWIEGA46WW/moc_AldousBroderMazeGenerator.cpp",
-			null
-		],
-		[
-			"/Users/jk/CLionProjects/untitled6/FloodFillMicromouseController.h",
-			"MU",
-			"EWIEGA46WW/moc_FloodFillMicromouseController.cpp",
+			"EWIEGA46WW/moc_Controller.cpp",
 			null
 		],
 		[
@@ -370,39 +364,81 @@
 			null
 		],
 		[
-			"/Users/jk/CLionProjects/untitled6/MazeGenerator.h",
+			"/Users/jk/CLionProjects/untitled6/MazeGenerator/AldousBroderMazeGenerator.h",
 			"MU",
-			"EWIEGA46WW/moc_MazeGenerator.cpp",
+			"P2QBUK5NEV/moc_AldousBroderMazeGenerator.cpp",
 			null
 		],
 		[
-			"/Users/jk/CLionProjects/untitled6/MazeVisualizer.h",
+			"/Users/jk/CLionProjects/untitled6/MazeGenerator/MazeGenerator.h",
 			"MU",
-			"EWIEGA46WW/moc_MazeVisualizer.cpp",
+			"P2QBUK5NEV/moc_MazeGenerator.cpp",
 			null
 		],
 		[
-			"/Users/jk/CLionProjects/untitled6/MicromouseController.h",
+			"/Users/jk/CLionProjects/untitled6/MazeGenerator/PrimsMazeGenerator.h",
 			"MU",
-			"EWIEGA46WW/moc_MicromouseController.cpp",
+			"P2QBUK5NEV/moc_PrimsMazeGenerator.cpp",
 			null
 		],
 		[
-			"/Users/jk/CLionProjects/untitled6/PrimsMazeGenerator.h",
+			"/Users/jk/CLionProjects/untitled6/MazeGenerator/RecursiveBacktracker.h",
 			"MU",
-			"EWIEGA46WW/moc_PrimsMazeGenerator.cpp",
+			"P2QBUK5NEV/moc_RecursiveBacktracker.cpp",
 			null
 		],
 		[
-			"/Users/jk/CLionProjects/untitled6/RecursiveBacktracker.h",
+			"/Users/jk/CLionProjects/untitled6/MicroMouseController/FloodFillMicromouseController.h",
 			"MU",
-			"EWIEGA46WW/moc_RecursiveBacktracker.cpp",
+			"ATCO4NGWWY/moc_FloodFillMicromouseController.cpp",
 			null
 		],
 		[
-			"/Users/jk/CLionProjects/untitled6/WallFollowerController.h",
+			"/Users/jk/CLionProjects/untitled6/MicroMouseController/MicromouseController.h",
 			"MU",
-			"EWIEGA46WW/moc_WallFollowerController.cpp",
+			"ATCO4NGWWY/moc_MicromouseController.cpp",
+			null
+		],
+		[
+			"/Users/jk/CLionProjects/untitled6/MicroMouseController/WallFollowerController.h",
+			"MU",
+			"ATCO4NGWWY/moc_WallFollowerController.cpp",
+			null
+		],
+		[
+			"/Users/jk/CLionProjects/untitled6/MicromouseController/Sensor/LambdaSensor.h",
+			"MU",
+			"7NOEM7P7QF/moc_LambdaSensor.cpp",
+			null
+		],
+		[
+			"/Users/jk/CLionProjects/untitled6/MicromouseController/Sensor/MicromouseSensor.h",
+			"MU",
+			"7NOEM7P7QF/moc_MicromouseSensor.cpp",
+			null
+		],
+		[
+			"/Users/jk/CLionProjects/untitled6/Signal.h",
+			"MU",
+			"EWIEGA46WW/moc_Signal.cpp",
+			null
+		],
+		[
+			"/Users/jk/CLionProjects/untitled6/Timer.h",
+			"MU",
+			"EWIEGA46WW/moc_Timer.cpp",
+			null
+		],
+		[
+			"/Users/jk/CLionProjects/untitled6/Visualizer/QVisualizer.h",
+			"MU",
+			"LC2DT33SEF/moc_QVisualizer.cpp",
+			null
+		],
+		[
+			"/Users/jk/CLionProjects/untitled6/Visualizer/Visualizer.h",
+			"MU",
+			"LC2DT33SEF/moc_Visualizer.cpp",
 			null
 		]
 	],
@@ -465,36 +501,62 @@
 	"SETTINGS_FILE" : "/Users/jk/CLionProjects/untitled6/cmake-build-debug/CMakeFiles/untitled6_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
-		[
-			"/Users/jk/CLionProjects/untitled6/AldousBroderMazeGenerator.cpp",
-			"MU",
-			null
-		],
-		[
-			"/Users/jk/CLionProjects/untitled6/FloodFillMicromouseController.cpp",
-			"MU",
-			null
-		],
+		[ "/Users/jk/CLionProjects/untitled6/Controller.cpp", "MU", null ],
 		[ "/Users/jk/CLionProjects/untitled6/MainWindow.cpp", "MU", null ],
-		[ "/Users/jk/CLionProjects/untitled6/MazeGenerator.cpp", "MU", null ],
-		[ "/Users/jk/CLionProjects/untitled6/MazeVisualizer.cpp", "MU", null ],
 		[
-			"/Users/jk/CLionProjects/untitled6/MicromouseController.cpp",
+			"/Users/jk/CLionProjects/untitled6/MazeGenerator/AldousBroderMazeGenerator.cpp",
 			"MU",
 			null
 		],
 		[
-			"/Users/jk/CLionProjects/untitled6/PrimsMazeGenerator.cpp",
+			"/Users/jk/CLionProjects/untitled6/MazeGenerator/MazeGenerator.cpp",
 			"MU",
 			null
 		],
 		[
-			"/Users/jk/CLionProjects/untitled6/RecursiveBacktracker.cpp",
+			"/Users/jk/CLionProjects/untitled6/MazeGenerator/PrimsMazeGenerator.cpp",
 			"MU",
 			null
 		],
 		[
-			"/Users/jk/CLionProjects/untitled6/WallFollowerController.cpp",
+			"/Users/jk/CLionProjects/untitled6/MazeGenerator/RecursiveBacktracker.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/jk/CLionProjects/untitled6/MicroMouseController/FloodFillMicromouseController.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/jk/CLionProjects/untitled6/MicroMouseController/MicromouseController.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/jk/CLionProjects/untitled6/MicroMouseController/WallFollowerController.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/jk/CLionProjects/untitled6/MicromouseController/Sensor/LambdaSensor.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/jk/CLionProjects/untitled6/MicromouseController/Sensor/MicromouseSensor.cpp",
+			"MU",
+			null
+		],
+		[ "/Users/jk/CLionProjects/untitled6/Signal.cpp", "MU", null ],
+		[ "/Users/jk/CLionProjects/untitled6/Timer.cpp", "MU", null ],
+		[
+			"/Users/jk/CLionProjects/untitled6/Visualizer/QVisualizer.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/jk/CLionProjects/untitled6/Visualizer/Visualizer.cpp",
 			"MU",
 			null
 		],
