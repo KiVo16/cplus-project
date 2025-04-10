@@ -65,61 +65,69 @@ build CMakeFiles/untitled6.dir/main.cpp.o: CXX_COMPILER__untitled6_unscanned_Deb
   OBJECT_DIR = CMakeFiles/untitled6.dir
   OBJECT_FILE_DIR = CMakeFiles/untitled6.dir
 
-build CMakeFiles/untitled6.dir/MazeGenerator/MazeGenerator.cpp.o: CXX_COMPILER__untitled6_unscanned_Debug /Users/jk/CLionProjects/untitled6/MazeGenerator/MazeGenerator.cpp || cmake_object_order_depends_target_untitled6
+build CMakeFiles/untitled6.dir/Maze/Generator/MazeGenerator.cpp.o: CXX_COMPILER__untitled6_unscanned_Debug /Users/jk/CLionProjects/untitled6/Maze/Generator/MazeGenerator.cpp || cmake_object_order_depends_target_untitled6
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
-  DEP_FILE = CMakeFiles/untitled6.dir/MazeGenerator/MazeGenerator.cpp.o.d
+  DEP_FILE = CMakeFiles/untitled6.dir/Maze/Generator/MazeGenerator.cpp.o.d
   FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -mmacosx-version-min=15.0 -fcolor-diagnostics
   INCLUDES = -isystem /Users/jk/CLionProjects/untitled6/cmake-build-debug/untitled6_autogen/include -isystem /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Headers -iframework /Users/jk/Qt/6.8.2/macos/lib -isystem /Users/jk/Qt/6.8.2/macos/mkspecs/macx-clang -isystem /Users/jk/Qt/6.8.2/macos/include -isystem /Users/jk/Qt/6.8.2/macos/lib/QtGui.framework/Headers -isystem /Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Headers
   OBJECT_DIR = CMakeFiles/untitled6.dir
-  OBJECT_FILE_DIR = CMakeFiles/untitled6.dir/MazeGenerator
+  OBJECT_FILE_DIR = CMakeFiles/untitled6.dir/Maze/Generator
 
-build CMakeFiles/untitled6.dir/MazeGenerator/AldousBroderMazeGenerator.cpp.o: CXX_COMPILER__untitled6_unscanned_Debug /Users/jk/CLionProjects/untitled6/MazeGenerator/AldousBroderMazeGenerator.cpp || cmake_object_order_depends_target_untitled6
+build CMakeFiles/untitled6.dir/Maze/Generator/AldousBroderMazeGenerator.cpp.o: CXX_COMPILER__untitled6_unscanned_Debug /Users/jk/CLionProjects/untitled6/Maze/Generator/AldousBroderMazeGenerator.cpp || cmake_object_order_depends_target_untitled6
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
-  DEP_FILE = CMakeFiles/untitled6.dir/MazeGenerator/AldousBroderMazeGenerator.cpp.o.d
+  DEP_FILE = CMakeFiles/untitled6.dir/Maze/Generator/AldousBroderMazeGenerator.cpp.o.d
   FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -mmacosx-version-min=15.0 -fcolor-diagnostics
   INCLUDES = -isystem /Users/jk/CLionProjects/untitled6/cmake-build-debug/untitled6_autogen/include -isystem /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Headers -iframework /Users/jk/Qt/6.8.2/macos/lib -isystem /Users/jk/Qt/6.8.2/macos/mkspecs/macx-clang -isystem /Users/jk/Qt/6.8.2/macos/include -isystem /Users/jk/Qt/6.8.2/macos/lib/QtGui.framework/Headers -isystem /Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Headers
   OBJECT_DIR = CMakeFiles/untitled6.dir
-  OBJECT_FILE_DIR = CMakeFiles/untitled6.dir/MazeGenerator
+  OBJECT_FILE_DIR = CMakeFiles/untitled6.dir/Maze/Generator
 
-build CMakeFiles/untitled6.dir/MazeGenerator/RecursiveBacktracker.cpp.o: CXX_COMPILER__untitled6_unscanned_Debug /Users/jk/CLionProjects/untitled6/MazeGenerator/RecursiveBacktracker.cpp || cmake_object_order_depends_target_untitled6
+build CMakeFiles/untitled6.dir/Maze/Generator/RecursiveBacktracker.cpp.o: CXX_COMPILER__untitled6_unscanned_Debug /Users/jk/CLionProjects/untitled6/Maze/Generator/RecursiveBacktracker.cpp || cmake_object_order_depends_target_untitled6
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
-  DEP_FILE = CMakeFiles/untitled6.dir/MazeGenerator/RecursiveBacktracker.cpp.o.d
+  DEP_FILE = CMakeFiles/untitled6.dir/Maze/Generator/RecursiveBacktracker.cpp.o.d
   FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -mmacosx-version-min=15.0 -fcolor-diagnostics
   INCLUDES = -isystem /Users/jk/CLionProjects/untitled6/cmake-build-debug/untitled6_autogen/include -isystem /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Headers -iframework /Users/jk/Qt/6.8.2/macos/lib -isystem /Users/jk/Qt/6.8.2/macos/mkspecs/macx-clang -isystem /Users/jk/Qt/6.8.2/macos/include -isystem /Users/jk/Qt/6.8.2/macos/lib/QtGui.framework/Headers -isystem /Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Headers
   OBJECT_DIR = CMakeFiles/untitled6.dir
-  OBJECT_FILE_DIR = CMakeFiles/untitled6.dir/MazeGenerator
+  OBJECT_FILE_DIR = CMakeFiles/untitled6.dir/Maze/Generator
 
-build CMakeFiles/untitled6.dir/MazeGenerator/PrimsMazeGenerator.cpp.o: CXX_COMPILER__untitled6_unscanned_Debug /Users/jk/CLionProjects/untitled6/MazeGenerator/PrimsMazeGenerator.cpp || cmake_object_order_depends_target_untitled6
+build CMakeFiles/untitled6.dir/Maze/Generator/PrimsMazeGenerator.cpp.o: CXX_COMPILER__untitled6_unscanned_Debug /Users/jk/CLionProjects/untitled6/Maze/Generator/PrimsMazeGenerator.cpp || cmake_object_order_depends_target_untitled6
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
-  DEP_FILE = CMakeFiles/untitled6.dir/MazeGenerator/PrimsMazeGenerator.cpp.o.d
+  DEP_FILE = CMakeFiles/untitled6.dir/Maze/Generator/PrimsMazeGenerator.cpp.o.d
   FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -mmacosx-version-min=15.0 -fcolor-diagnostics
   INCLUDES = -isystem /Users/jk/CLionProjects/untitled6/cmake-build-debug/untitled6_autogen/include -isystem /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Headers -iframework /Users/jk/Qt/6.8.2/macos/lib -isystem /Users/jk/Qt/6.8.2/macos/mkspecs/macx-clang -isystem /Users/jk/Qt/6.8.2/macos/include -isystem /Users/jk/Qt/6.8.2/macos/lib/QtGui.framework/Headers -isystem /Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Headers
   OBJECT_DIR = CMakeFiles/untitled6.dir
-  OBJECT_FILE_DIR = CMakeFiles/untitled6.dir/MazeGenerator
+  OBJECT_FILE_DIR = CMakeFiles/untitled6.dir/Maze/Generator
 
-build CMakeFiles/untitled6.dir/MicroMouseController/MicromouseController.cpp.o: CXX_COMPILER__untitled6_unscanned_Debug /Users/jk/CLionProjects/untitled6/MicroMouseController/MicromouseController.cpp || cmake_object_order_depends_target_untitled6
+build CMakeFiles/untitled6.dir/Micromouse/Micromouse.cpp.o: CXX_COMPILER__untitled6_unscanned_Debug /Users/jk/CLionProjects/untitled6/Micromouse/Micromouse.cpp || cmake_object_order_depends_target_untitled6
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
-  DEP_FILE = CMakeFiles/untitled6.dir/MicroMouseController/MicromouseController.cpp.o.d
+  DEP_FILE = CMakeFiles/untitled6.dir/Micromouse/Micromouse.cpp.o.d
   FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -mmacosx-version-min=15.0 -fcolor-diagnostics
   INCLUDES = -isystem /Users/jk/CLionProjects/untitled6/cmake-build-debug/untitled6_autogen/include -isystem /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Headers -iframework /Users/jk/Qt/6.8.2/macos/lib -isystem /Users/jk/Qt/6.8.2/macos/mkspecs/macx-clang -isystem /Users/jk/Qt/6.8.2/macos/include -isystem /Users/jk/Qt/6.8.2/macos/lib/QtGui.framework/Headers -isystem /Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Headers
   OBJECT_DIR = CMakeFiles/untitled6.dir
-  OBJECT_FILE_DIR = CMakeFiles/untitled6.dir/MicroMouseController
+  OBJECT_FILE_DIR = CMakeFiles/untitled6.dir/Micromouse
 
-build CMakeFiles/untitled6.dir/MicroMouseController/WallFollowerController.cpp.o: CXX_COMPILER__untitled6_unscanned_Debug /Users/jk/CLionProjects/untitled6/MicroMouseController/WallFollowerController.cpp || cmake_object_order_depends_target_untitled6
+build CMakeFiles/untitled6.dir/Micromouse/Controller/MicromouseController.cpp.o: CXX_COMPILER__untitled6_unscanned_Debug /Users/jk/CLionProjects/untitled6/Micromouse/Controller/MicromouseController.cpp || cmake_object_order_depends_target_untitled6
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
-  DEP_FILE = CMakeFiles/untitled6.dir/MicroMouseController/WallFollowerController.cpp.o.d
+  DEP_FILE = CMakeFiles/untitled6.dir/Micromouse/Controller/MicromouseController.cpp.o.d
   FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -mmacosx-version-min=15.0 -fcolor-diagnostics
   INCLUDES = -isystem /Users/jk/CLionProjects/untitled6/cmake-build-debug/untitled6_autogen/include -isystem /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Headers -iframework /Users/jk/Qt/6.8.2/macos/lib -isystem /Users/jk/Qt/6.8.2/macos/mkspecs/macx-clang -isystem /Users/jk/Qt/6.8.2/macos/include -isystem /Users/jk/Qt/6.8.2/macos/lib/QtGui.framework/Headers -isystem /Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Headers
   OBJECT_DIR = CMakeFiles/untitled6.dir
-  OBJECT_FILE_DIR = CMakeFiles/untitled6.dir/MicroMouseController
+  OBJECT_FILE_DIR = CMakeFiles/untitled6.dir/Micromouse/Controller
 
-build CMakeFiles/untitled6.dir/MicroMouseController/FloodFillMicromouseController.cpp.o: CXX_COMPILER__untitled6_unscanned_Debug /Users/jk/CLionProjects/untitled6/MicroMouseController/FloodFillMicromouseController.cpp || cmake_object_order_depends_target_untitled6
+build CMakeFiles/untitled6.dir/Micromouse/Controller/WallFollowerController.cpp.o: CXX_COMPILER__untitled6_unscanned_Debug /Users/jk/CLionProjects/untitled6/Micromouse/Controller/WallFollowerController.cpp || cmake_object_order_depends_target_untitled6
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
-  DEP_FILE = CMakeFiles/untitled6.dir/MicroMouseController/FloodFillMicromouseController.cpp.o.d
+  DEP_FILE = CMakeFiles/untitled6.dir/Micromouse/Controller/WallFollowerController.cpp.o.d
   FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -mmacosx-version-min=15.0 -fcolor-diagnostics
   INCLUDES = -isystem /Users/jk/CLionProjects/untitled6/cmake-build-debug/untitled6_autogen/include -isystem /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Headers -iframework /Users/jk/Qt/6.8.2/macos/lib -isystem /Users/jk/Qt/6.8.2/macos/mkspecs/macx-clang -isystem /Users/jk/Qt/6.8.2/macos/include -isystem /Users/jk/Qt/6.8.2/macos/lib/QtGui.framework/Headers -isystem /Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Headers
   OBJECT_DIR = CMakeFiles/untitled6.dir
-  OBJECT_FILE_DIR = CMakeFiles/untitled6.dir/MicroMouseController
+  OBJECT_FILE_DIR = CMakeFiles/untitled6.dir/Micromouse/Controller
+
+build CMakeFiles/untitled6.dir/Micromouse/Controller/FloodFillMicromouseController.cpp.o: CXX_COMPILER__untitled6_unscanned_Debug /Users/jk/CLionProjects/untitled6/Micromouse/Controller/FloodFillMicromouseController.cpp || cmake_object_order_depends_target_untitled6
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles/untitled6.dir/Micromouse/Controller/FloodFillMicromouseController.cpp.o.d
+  FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -mmacosx-version-min=15.0 -fcolor-diagnostics
+  INCLUDES = -isystem /Users/jk/CLionProjects/untitled6/cmake-build-debug/untitled6_autogen/include -isystem /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Headers -iframework /Users/jk/Qt/6.8.2/macos/lib -isystem /Users/jk/Qt/6.8.2/macos/mkspecs/macx-clang -isystem /Users/jk/Qt/6.8.2/macos/include -isystem /Users/jk/Qt/6.8.2/macos/lib/QtGui.framework/Headers -isystem /Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Headers
+  OBJECT_DIR = CMakeFiles/untitled6.dir
+  OBJECT_FILE_DIR = CMakeFiles/untitled6.dir/Micromouse/Controller
 
 build CMakeFiles/untitled6.dir/Visualizer/Visualizer.cpp.o: CXX_COMPILER__untitled6_unscanned_Debug /Users/jk/CLionProjects/untitled6/Visualizer/Visualizer.cpp || cmake_object_order_depends_target_untitled6
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
@@ -153,37 +161,45 @@ build CMakeFiles/untitled6.dir/MainWindow.cpp.o: CXX_COMPILER__untitled6_unscann
   OBJECT_DIR = CMakeFiles/untitled6.dir
   OBJECT_FILE_DIR = CMakeFiles/untitled6.dir
 
-build CMakeFiles/untitled6.dir/Timer.cpp.o: CXX_COMPILER__untitled6_unscanned_Debug /Users/jk/CLionProjects/untitled6/Timer.cpp || cmake_object_order_depends_target_untitled6
+build CMakeFiles/untitled6.dir/Utils/Timer.cpp.o: CXX_COMPILER__untitled6_unscanned_Debug /Users/jk/CLionProjects/untitled6/Utils/Timer.cpp || cmake_object_order_depends_target_untitled6
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
-  DEP_FILE = CMakeFiles/untitled6.dir/Timer.cpp.o.d
+  DEP_FILE = CMakeFiles/untitled6.dir/Utils/Timer.cpp.o.d
   FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -mmacosx-version-min=15.0 -fcolor-diagnostics
   INCLUDES = -isystem /Users/jk/CLionProjects/untitled6/cmake-build-debug/untitled6_autogen/include -isystem /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Headers -iframework /Users/jk/Qt/6.8.2/macos/lib -isystem /Users/jk/Qt/6.8.2/macos/mkspecs/macx-clang -isystem /Users/jk/Qt/6.8.2/macos/include -isystem /Users/jk/Qt/6.8.2/macos/lib/QtGui.framework/Headers -isystem /Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Headers
   OBJECT_DIR = CMakeFiles/untitled6.dir
-  OBJECT_FILE_DIR = CMakeFiles/untitled6.dir
+  OBJECT_FILE_DIR = CMakeFiles/untitled6.dir/Utils
 
-build CMakeFiles/untitled6.dir/Signal.cpp.o: CXX_COMPILER__untitled6_unscanned_Debug /Users/jk/CLionProjects/untitled6/Signal.cpp || cmake_object_order_depends_target_untitled6
+build CMakeFiles/untitled6.dir/Utils/Signal.cpp.o: CXX_COMPILER__untitled6_unscanned_Debug /Users/jk/CLionProjects/untitled6/Utils/Signal.cpp || cmake_object_order_depends_target_untitled6
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
-  DEP_FILE = CMakeFiles/untitled6.dir/Signal.cpp.o.d
+  DEP_FILE = CMakeFiles/untitled6.dir/Utils/Signal.cpp.o.d
   FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -mmacosx-version-min=15.0 -fcolor-diagnostics
   INCLUDES = -isystem /Users/jk/CLionProjects/untitled6/cmake-build-debug/untitled6_autogen/include -isystem /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Headers -iframework /Users/jk/Qt/6.8.2/macos/lib -isystem /Users/jk/Qt/6.8.2/macos/mkspecs/macx-clang -isystem /Users/jk/Qt/6.8.2/macos/include -isystem /Users/jk/Qt/6.8.2/macos/lib/QtGui.framework/Headers -isystem /Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Headers
   OBJECT_DIR = CMakeFiles/untitled6.dir
-  OBJECT_FILE_DIR = CMakeFiles/untitled6.dir
+  OBJECT_FILE_DIR = CMakeFiles/untitled6.dir/Utils
 
-build CMakeFiles/untitled6.dir/MicromouseController/Sensor/MicromouseSensor.cpp.o: CXX_COMPILER__untitled6_unscanned_Debug /Users/jk/CLionProjects/untitled6/MicromouseController/Sensor/MicromouseSensor.cpp || cmake_object_order_depends_target_untitled6
+build CMakeFiles/untitled6.dir/Micromouse/Sensor/MicromouseSensor.cpp.o: CXX_COMPILER__untitled6_unscanned_Debug /Users/jk/CLionProjects/untitled6/Micromouse/Sensor/MicromouseSensor.cpp || cmake_object_order_depends_target_untitled6
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
-  DEP_FILE = CMakeFiles/untitled6.dir/MicromouseController/Sensor/MicromouseSensor.cpp.o.d
+  DEP_FILE = CMakeFiles/untitled6.dir/Micromouse/Sensor/MicromouseSensor.cpp.o.d
   FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -mmacosx-version-min=15.0 -fcolor-diagnostics
   INCLUDES = -isystem /Users/jk/CLionProjects/untitled6/cmake-build-debug/untitled6_autogen/include -isystem /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Headers -iframework /Users/jk/Qt/6.8.2/macos/lib -isystem /Users/jk/Qt/6.8.2/macos/mkspecs/macx-clang -isystem /Users/jk/Qt/6.8.2/macos/include -isystem /Users/jk/Qt/6.8.2/macos/lib/QtGui.framework/Headers -isystem /Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Headers
   OBJECT_DIR = CMakeFiles/untitled6.dir
-  OBJECT_FILE_DIR = CMakeFiles/untitled6.dir/MicromouseController/Sensor
+  OBJECT_FILE_DIR = CMakeFiles/untitled6.dir/Micromouse/Sensor
 
-build CMakeFiles/untitled6.dir/MicromouseController/Sensor/LambdaSensor.cpp.o: CXX_COMPILER__untitled6_unscanned_Debug /Users/jk/CLionProjects/untitled6/MicromouseController/Sensor/LambdaSensor.cpp || cmake_object_order_depends_target_untitled6
+build CMakeFiles/untitled6.dir/Micromouse/Sensor/LambdaSensor.cpp.o: CXX_COMPILER__untitled6_unscanned_Debug /Users/jk/CLionProjects/untitled6/Micromouse/Sensor/LambdaSensor.cpp || cmake_object_order_depends_target_untitled6
   DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
-  DEP_FILE = CMakeFiles/untitled6.dir/MicromouseController/Sensor/LambdaSensor.cpp.o.d
+  DEP_FILE = CMakeFiles/untitled6.dir/Micromouse/Sensor/LambdaSensor.cpp.o.d
   FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -mmacosx-version-min=15.0 -fcolor-diagnostics
   INCLUDES = -isystem /Users/jk/CLionProjects/untitled6/cmake-build-debug/untitled6_autogen/include -isystem /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Headers -iframework /Users/jk/Qt/6.8.2/macos/lib -isystem /Users/jk/Qt/6.8.2/macos/mkspecs/macx-clang -isystem /Users/jk/Qt/6.8.2/macos/include -isystem /Users/jk/Qt/6.8.2/macos/lib/QtGui.framework/Headers -isystem /Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Headers
   OBJECT_DIR = CMakeFiles/untitled6.dir
-  OBJECT_FILE_DIR = CMakeFiles/untitled6.dir/MicromouseController/Sensor
+  OBJECT_FILE_DIR = CMakeFiles/untitled6.dir/Micromouse/Sensor
+
+build CMakeFiles/untitled6.dir/Maze/Maze.cpp.o: CXX_COMPILER__untitled6_unscanned_Debug /Users/jk/CLionProjects/untitled6/Maze/Maze.cpp || cmake_object_order_depends_target_untitled6
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles/untitled6.dir/Maze/Maze.cpp.o.d
+  FLAGS = -g -std=gnu++20 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -mmacosx-version-min=15.0 -fcolor-diagnostics
+  INCLUDES = -isystem /Users/jk/CLionProjects/untitled6/cmake-build-debug/untitled6_autogen/include -isystem /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Headers -iframework /Users/jk/Qt/6.8.2/macos/lib -isystem /Users/jk/Qt/6.8.2/macos/mkspecs/macx-clang -isystem /Users/jk/Qt/6.8.2/macos/include -isystem /Users/jk/Qt/6.8.2/macos/lib/QtGui.framework/Headers -isystem /Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Headers
+  OBJECT_DIR = CMakeFiles/untitled6.dir
+  OBJECT_FILE_DIR = CMakeFiles/untitled6.dir/Maze
 
 
 # =============================================================================
@@ -193,7 +209,7 @@ build CMakeFiles/untitled6.dir/MicromouseController/Sensor/LambdaSensor.cpp.o: C
 #############################################
 # Link the executable untitled6
 
-build untitled6: CXX_EXECUTABLE_LINKER__untitled6_Debug CMakeFiles/untitled6.dir/untitled6_autogen/mocs_compilation.cpp.o CMakeFiles/untitled6.dir/main.cpp.o CMakeFiles/untitled6.dir/MazeGenerator/MazeGenerator.cpp.o CMakeFiles/untitled6.dir/MazeGenerator/AldousBroderMazeGenerator.cpp.o CMakeFiles/untitled6.dir/MazeGenerator/RecursiveBacktracker.cpp.o CMakeFiles/untitled6.dir/MazeGenerator/PrimsMazeGenerator.cpp.o CMakeFiles/untitled6.dir/MicroMouseController/MicromouseController.cpp.o CMakeFiles/untitled6.dir/MicroMouseController/WallFollowerController.cpp.o CMakeFiles/untitled6.dir/MicroMouseController/FloodFillMicromouseController.cpp.o CMakeFiles/untitled6.dir/Visualizer/Visualizer.cpp.o CMakeFiles/untitled6.dir/Visualizer/QVisualizer.cpp.o CMakeFiles/untitled6.dir/Controller.cpp.o CMakeFiles/untitled6.dir/MainWindow.cpp.o CMakeFiles/untitled6.dir/Timer.cpp.o CMakeFiles/untitled6.dir/Signal.cpp.o CMakeFiles/untitled6.dir/MicromouseController/Sensor/MicromouseSensor.cpp.o CMakeFiles/untitled6.dir/MicromouseController/Sensor/LambdaSensor.cpp.o | /Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Versions/A/QtWidgets /Users/jk/Qt/6.8.2/macos/lib/QtGui.framework/Versions/A/QtGui /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Versions/A/QtCore || untitled6_autogen untitled6_autogen_timestamp_deps
+build untitled6: CXX_EXECUTABLE_LINKER__untitled6_Debug CMakeFiles/untitled6.dir/untitled6_autogen/mocs_compilation.cpp.o CMakeFiles/untitled6.dir/main.cpp.o CMakeFiles/untitled6.dir/Maze/Generator/MazeGenerator.cpp.o CMakeFiles/untitled6.dir/Maze/Generator/AldousBroderMazeGenerator.cpp.o CMakeFiles/untitled6.dir/Maze/Generator/RecursiveBacktracker.cpp.o CMakeFiles/untitled6.dir/Maze/Generator/PrimsMazeGenerator.cpp.o CMakeFiles/untitled6.dir/Micromouse/Micromouse.cpp.o CMakeFiles/untitled6.dir/Micromouse/Controller/MicromouseController.cpp.o CMakeFiles/untitled6.dir/Micromouse/Controller/WallFollowerController.cpp.o CMakeFiles/untitled6.dir/Micromouse/Controller/FloodFillMicromouseController.cpp.o CMakeFiles/untitled6.dir/Visualizer/Visualizer.cpp.o CMakeFiles/untitled6.dir/Visualizer/QVisualizer.cpp.o CMakeFiles/untitled6.dir/Controller.cpp.o CMakeFiles/untitled6.dir/MainWindow.cpp.o CMakeFiles/untitled6.dir/Utils/Timer.cpp.o CMakeFiles/untitled6.dir/Utils/Signal.cpp.o CMakeFiles/untitled6.dir/Micromouse/Sensor/MicromouseSensor.cpp.o CMakeFiles/untitled6.dir/Micromouse/Sensor/LambdaSensor.cpp.o CMakeFiles/untitled6.dir/Maze/Maze.cpp.o | /Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Versions/A/QtWidgets /Users/jk/Qt/6.8.2/macos/lib/QtGui.framework/Versions/A/QtGui /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Versions/A/QtCore || untitled6_autogen untitled6_autogen_timestamp_deps
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -mmacosx-version-min=15.0
   LINK_FLAGS = -L/opt/homebrew/opt/freetds/lib -L/opt/homebrew/opt/openssl@3/lib
   LINK_LIBRARIES = -Wl,-rpath,/Users/jk/Qt/6.8.2/macos/lib  /Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Versions/A/QtWidgets  /Users/jk/Qt/6.8.2/macos/lib/QtGui.framework/Versions/A/QtGui  -framework AGL  -framework AppKit  -framework OpenGL  -framework ImageIO  -framework Metal  /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Versions/A/QtCore  -framework IOKit  -framework DiskArbitration  -framework UniformTypeIdentifiers

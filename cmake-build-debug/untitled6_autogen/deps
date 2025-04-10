@@ -801,6 +801,7 @@ untitled6_autogen/timestamp: \
 	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/initializer_list \
 	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/ios \
 	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/iosfwd \
+	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/iostream \
 	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/istream \
 	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/iterator \
 	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/limits \
@@ -977,29 +978,32 @@ untitled6_autogen/timestamp: \
 	/Users/jk/CLionProjects/untitled6/Controller.h \
 	/Users/jk/CLionProjects/untitled6/MainWindow.cpp \
 	/Users/jk/CLionProjects/untitled6/MainWindow.h \
-	/Users/jk/CLionProjects/untitled6/MazeGenerator/AldousBroderMazeGenerator.cpp \
-	/Users/jk/CLionProjects/untitled6/MazeGenerator/AldousBroderMazeGenerator.h \
-	/Users/jk/CLionProjects/untitled6/MazeGenerator/MazeGenerator.cpp \
-	/Users/jk/CLionProjects/untitled6/MazeGenerator/MazeGenerator.h \
-	/Users/jk/CLionProjects/untitled6/MazeGenerator/PrimsMazeGenerator.cpp \
-	/Users/jk/CLionProjects/untitled6/MazeGenerator/PrimsMazeGenerator.h \
-	/Users/jk/CLionProjects/untitled6/MazeGenerator/RecursiveBacktracker.cpp \
-	/Users/jk/CLionProjects/untitled6/MazeGenerator/RecursiveBacktracker.h \
-	/Users/jk/CLionProjects/untitled6/MicroMouseController/FloodFillMicromouseController.cpp \
-	/Users/jk/CLionProjects/untitled6/MicroMouseController/FloodFillMicromouseController.h \
-	/Users/jk/CLionProjects/untitled6/MicroMouseController/MicromouseController.cpp \
-	/Users/jk/CLionProjects/untitled6/MicroMouseController/MicromouseController.h \
-	/Users/jk/CLionProjects/untitled6/MicroMouseController/WallFollowerController.cpp \
-	/Users/jk/CLionProjects/untitled6/MicroMouseController/WallFollowerController.h \
-	/Users/jk/CLionProjects/untitled6/MicromouseController/MicromouseController.h \
-	/Users/jk/CLionProjects/untitled6/MicromouseController/Sensor/LambdaSensor.cpp \
-	/Users/jk/CLionProjects/untitled6/MicromouseController/Sensor/LambdaSensor.h \
-	/Users/jk/CLionProjects/untitled6/MicromouseController/Sensor/MicromouseSensor.cpp \
-	/Users/jk/CLionProjects/untitled6/MicromouseController/Sensor/MicromouseSensor.h \
-	/Users/jk/CLionProjects/untitled6/Signal.cpp \
-	/Users/jk/CLionProjects/untitled6/Signal.h \
-	/Users/jk/CLionProjects/untitled6/Timer.cpp \
-	/Users/jk/CLionProjects/untitled6/Timer.h \
+	/Users/jk/CLionProjects/untitled6/Maze/Generator/AldousBroderMazeGenerator.cpp \
+	/Users/jk/CLionProjects/untitled6/Maze/Generator/AldousBroderMazeGenerator.h \
+	/Users/jk/CLionProjects/untitled6/Maze/Generator/MazeGenerator.cpp \
+	/Users/jk/CLionProjects/untitled6/Maze/Generator/MazeGenerator.h \
+	/Users/jk/CLionProjects/untitled6/Maze/Generator/PrimsMazeGenerator.cpp \
+	/Users/jk/CLionProjects/untitled6/Maze/Generator/PrimsMazeGenerator.h \
+	/Users/jk/CLionProjects/untitled6/Maze/Generator/RecursiveBacktracker.cpp \
+	/Users/jk/CLionProjects/untitled6/Maze/Generator/RecursiveBacktracker.h \
+	/Users/jk/CLionProjects/untitled6/Maze/Maze.cpp \
+	/Users/jk/CLionProjects/untitled6/Maze/Maze.h \
+	/Users/jk/CLionProjects/untitled6/Micromouse/Controller/FloodFillMicromouseController.cpp \
+	/Users/jk/CLionProjects/untitled6/Micromouse/Controller/FloodFillMicromouseController.h \
+	/Users/jk/CLionProjects/untitled6/Micromouse/Controller/MicromouseController.cpp \
+	/Users/jk/CLionProjects/untitled6/Micromouse/Controller/MicromouseController.h \
+	/Users/jk/CLionProjects/untitled6/Micromouse/Controller/WallFollowerController.cpp \
+	/Users/jk/CLionProjects/untitled6/Micromouse/Controller/WallFollowerController.h \
+	/Users/jk/CLionProjects/untitled6/Micromouse/Micromouse.cpp \
+	/Users/jk/CLionProjects/untitled6/Micromouse/Micromouse.h \
+	/Users/jk/CLionProjects/untitled6/Micromouse/Sensor/LambdaSensor.cpp \
+	/Users/jk/CLionProjects/untitled6/Micromouse/Sensor/LambdaSensor.h \
+	/Users/jk/CLionProjects/untitled6/Micromouse/Sensor/MicromouseSensor.cpp \
+	/Users/jk/CLionProjects/untitled6/Micromouse/Sensor/MicromouseSensor.h \
+	/Users/jk/CLionProjects/untitled6/Utils/Signal.cpp \
+	/Users/jk/CLionProjects/untitled6/Utils/Signal.h \
+	/Users/jk/CLionProjects/untitled6/Utils/Timer.cpp \
+	/Users/jk/CLionProjects/untitled6/Utils/Timer.h \
 	/Users/jk/CLionProjects/untitled6/Visualizer/QVisualizer.cpp \
 	/Users/jk/CLionProjects/untitled6/Visualizer/QVisualizer.h \
 	/Users/jk/CLionProjects/untitled6/Visualizer/Visualizer.cpp \
@@ -1163,15 +1167,20 @@ untitled6_autogen/timestamp: \
 	/Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Versions/A/Headers/QComboBox \
 	/Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Versions/A/Headers/QGraphicsScene \
 	/Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Versions/A/Headers/QPushButton \
+	/Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Versions/A/Headers/QVBoxLayout \
 	/Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Versions/A/Headers/QWidget \
 	/Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Versions/A/Headers/qabstractbutton.h \
 	/Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Versions/A/Headers/qabstractitemdelegate.h \
 	/Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Versions/A/Headers/qabstractslider.h \
 	/Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Versions/A/Headers/qabstractspinbox.h \
+	/Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Versions/A/Headers/qboxlayout.h \
 	/Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Versions/A/Headers/qcheckbox.h \
 	/Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Versions/A/Headers/qcombobox.h \
 	/Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Versions/A/Headers/qframe.h \
 	/Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Versions/A/Headers/qgraphicsscene.h \
+	/Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Versions/A/Headers/qgridlayout.h \
+	/Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Versions/A/Headers/qlayout.h \
+	/Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Versions/A/Headers/qlayoutitem.h \
 	/Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Versions/A/Headers/qpushbutton.h \
 	/Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Versions/A/Headers/qrubberband.h \
 	/Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Versions/A/Headers/qsizepolicy.h \

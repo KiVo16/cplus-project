@@ -4,11 +4,6 @@
 #include <QVBoxLayout>
 
 #include "Controller.h"
-#include "MazeGenerator/AldousBroderMazeGenerator.h"
-#include "MazeGenerator/PrimsMazeGenerator.h"
-#include "MazeGenerator/RecursiveBacktracker.h"
-#include "MicromouseController/FloodFillMicromouseController.h"
-#include "MicromouseController/WallFollowerController.h"
 #include "Visualizer/QVisualizer.h"
 
 MainWindow::MainWindow(QWidget *parent) : QWidget(parent) {
@@ -70,9 +65,7 @@ MainWindow::MainWindow(QWidget *parent) : QWidget(parent) {
 
 void MainWindow::startMazeGeneration() const {
     startMouseButton->setEnabled(false);
-    constexpr int rows = 20;
-    constexpr int cols = 20;
-    controller->startMazeGeneration(determineMazeGenerator(rows, cols), determineSolutionPoint());
+    controller->startMazeGeneration(determineMazeGenerator(), determineSolutionPoint());
 
     if (visualizeCheck->isChecked()) {
         skipMazeGenerationVisualizationButton->setVisible(true);
@@ -93,18 +86,18 @@ SolutionPoint MainWindow::determineSolutionPoint() const {
     return SolutionPoint::CENTER;
 }
 
-MazeGenerator *MainWindow::determineMazeGenerator(const int rows, const int cols) const {
+MazeGeneratorType MainWindow::determineMazeGenerator() const {
     QString solChoice = mazeAlgoCombo->currentText();
-    if (solChoice == "Recursive Backtracker") return new RecursiveBacktracker(rows, cols);
-    if (solChoice == "Prim's Algorithm") return new PrimsMazeGenerator(rows, cols);
-    return new AldousBroderMazeGenerator(rows, cols);
+    if (solChoice == "Recursive Backtracker") return MazeGeneratorType::RecursiveBacktracking;
+    if (solChoice == "Prim's Algorithm") return MazeGeneratorType::Prims;
+    return MazeGeneratorType::AldousBroder;
 }
 
-MicromouseController *MainWindow::determineMicromouseController() const {
+MicromouseControllerType MainWindow::determineMicromouseController() const {
     QString solChoice = mouseAlgoCombo->currentText();
-    if (solChoice == "Left-Hand Rule") return new WallFollowerController();
-    if (solChoice == "Flood Fill") return new FloodFillMicromouseController();
-    return new WallFollowerController();
+    if (solChoice == "Left-Hand Rule") return MicromouseControllerType::WallFollower;
+    if (solChoice == "Flood Fill") return MicromouseControllerType::FloodFill;
+    return MicromouseControllerType::WallFollower;
 }
 
 void MainWindow::skipMazeGenerationVisualization() const {

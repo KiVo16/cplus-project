@@ -1,10 +1,5 @@
-//
-// Created by Jakub Kurek on 08/04/2025.
-//
-
 #include "QVisualizer.h"
 
-#include <iostream>
 #include <QGraphicsView>
 #include <QVBoxLayout>
 #include <QPainterPath>
@@ -12,8 +7,8 @@
 QVisualizer::QVisualizer(QWidget *parent)
     : QWidget(parent), cellSize(20) {
     scene = new QGraphicsScene(this);
-    auto *view = new QGraphicsView(scene, this);
-    auto *layout = new QVBoxLayout(this);
+    view = new QGraphicsView(scene, this);
+    layout = new QVBoxLayout(this);
     wallPen = new QPen(Qt::black);
     layout->addWidget(view);
     setLayout(layout);
@@ -28,32 +23,33 @@ void QVisualizer::draw(MazeGeneratorVisualizationData *mazeData, MicrmouseVisual
 }
 
 void QVisualizer::drawMaze(const MazeGeneratorVisualizationData &d) const {
-    auto rows = d.maze.size();
-    auto cols = d.maze[0].size();
+    if (!d.maze) return;
+    auto rows = d.maze->getRowsCount();
+    auto cols = d.maze->getColsCount();
 
     for (int i = 0; i < rows; ++i) {
         for (int j = 0; j < cols; ++j) {
             int x = j * cellSize;
             int y = i * cellSize;
-            Cell cell = d.maze[i][j];
+            auto cell = d.maze->getCell(i, j);
+            if (!cell) continue;
             QPoint currentPoint(i, j);
             QColor cellColor = Qt::white;
 
-            if (cell.visited) cellColor = QColor(200, 200, 255);
+            if (d.visitedCoordinates.contains(std::make_pair(i, j))) cellColor = QColor(200, 200, 255);
             if (d.current == currentPoint && !d.isFinished) cellColor = QColor(100, 255, 100);
-
             if (d.startPoint == currentPoint) cellColor = QColor(153, 221, 231);
             if (d.solutionPoint == currentPoint) cellColor = QColor(255, 0, 0);
 
             scene->addRect(x, y, cellSize, cellSize, QPen(Qt::NoPen), QBrush(cellColor));
 
-            if (cell.walls[0])
+            if (cell->walls[0])
                 scene->addLine(x, y, x + cellSize, y, *wallPen);
-            if (cell.walls[1])
+            if (cell->walls[1])
                 scene->addLine(x + cellSize, y, x + cellSize, y + cellSize, *wallPen);
-            if (cell.walls[2])
+            if (cell->walls[2])
                 scene->addLine(x, y + cellSize, x + cellSize, y + cellSize, *wallPen);
-            if (cell.walls[3])
+            if (cell->walls[3])
                 scene->addLine(x, y, x, y + cellSize, *wallPen);
         }
     }
@@ -89,13 +85,13 @@ void QVisualizer::drawMicromouse(const MicrmouseVisualizationData &d) const {
         double angle = 0.0;
         switch (currentMouseOrientation) {
             case 0: angle = 0.0;
-                break; // North
+                break;
             case 1: angle = 90.0;
-                break; // East
+                break;
             case 2: angle = 180.0;
-                break; // South
+                break;
             case 3: angle = 270.0;
-                break; // West
+                break;
             default: angle = 0.0;
                 break;
         }
