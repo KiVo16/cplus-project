@@ -1,61 +1,86 @@
-//
-// Created by Jakub Kurek on 08/04/2025.
-//
-
 #include "Controller.h"
 
-#include <iostream>
-
-#include "MicromouseController/Sensor/LambdaSensor.h"
+#include "Maze/Generator/AldousBroderMazeGenerator.h"
+#include "Maze/Generator/PrimsMazeGenerator.h"
+#include "Maze/Generator/RecursiveBacktracker.h"
+#include "Micromouse/Controller/FloodFillMicromouseController.h"
+#include "Micromouse/Controller/WallFollowerController.h"
+#include "Micromouse/Sensor/LambdaSensor.h"
 #include "Visualizer/Visualizer.h"
 
 Controller::Controller(Visualizer *visualizer)
     : visualizer(visualizer), timerMaze(new Timer()), timerMicroMouse(new Timer()) {
 }
 
-void Controller::startMazeGeneration(MazeGenerator *mg, SolutionPoint sp) {
-    mazeGenerator = mg;
+void Controller::startMazeGeneration(const MazeGeneratorType mazeGeneratorType, const SolutionPoint sp) {
+    setupMazeGenerator(mazeGeneratorType);
     setupStartEndPoint(sp);
     timerMaze->start([this]() { this->updateMaze(); }, std::chrono::milliseconds(5));
     micromouseController = nullptr;
 }
 
-void Controller::startMicromouse(MicromouseController *mc) {
+void Controller::setupMazeGenerator(const MazeGeneratorType mazeGeneratorType) {
+    std::unique_ptr<MazeGenerator> mazeGenerator = nullptr;
+    constexpr int rows = 20;
+    constexpr int cols = 20;
+    switch (mazeGeneratorType) {
+        case MazeGeneratorType::AldousBroder:
+            mazeGenerator = std::make_unique<AldousBroderMazeGenerator>(rows, cols);
+            break;
+        case MazeGeneratorType::Prims:
+            mazeGenerator = std::make_unique<PrimsMazeGenerator>(rows, cols);
+            break;
+        case MazeGeneratorType::RecursiveBacktracking:
+            mazeGenerator = std::make_unique<RecursiveBacktracker>(rows, cols);
+            break;
+        default:
+            mazeGenerator = std::make_unique<RecursiveBacktracker>(rows, cols);
+    }
+
+    this->mazeGenerator = std::move(mazeGenerator);
+}
+
+void Controller::startMicromouse(const MicromouseControllerType micromouseControllerType) {
     if (!mazeGenerator || !mazeGenerator->isFinished()) return;
-    micromouseController = mc;
-    micromouseController->setup(new LambdaSensor([this](int fromR, int fromC, int toR, int toC) {
-            auto maze = this->mazeGenerator->getMaze();
-            if (toR < 0 || toR >= static_cast<int>(maze.size()) || toC < 0 || toC >= static_cast<int>(maze[0].size()))
-                return false;
-            int dR = toR - fromR;
-            int dC = toC - fromC;
-            if (dR == -1 && dC == 0) {
-                if (maze[fromR][fromC].walls[0]) return false;
-                if (maze[toR][toC].walls[2]) return false;
-            } else if (dR == 1 && dC == 0) {
-                if (maze[fromR][fromC].walls[2]) return false;
-                if (maze[toR][toC].walls[0]) return false;
-            } else if (dR == 0 && dC == 1) {
-                if (maze[fromR][fromC].walls[1]) return false;
-                if (maze[toR][toC].walls[3]) return false;
-            } else if (dR == 0 && dC == -1) {
-                if (maze[fromR][fromC].walls[3]) return false;
-                if (maze[toR][toC].walls[1]) return false;
-            } else {
-                return false;
-            }
-            return true;
-        }), startPoint, solutionPoint);
+    micromouseController.reset();
+    micromouse.reset();
+    setupMicromouse(micromouseControllerType);
     timerMaze->start([this]() { this->updateMicromouse(); }, std::chrono::milliseconds(5));
+}
+
+void Controller::setupMicromouse(const MicromouseControllerType micromouseControllerType) {
+    std::unique_ptr<MicromouseController> micromouseController = nullptr;
+    micromouse = std::make_unique<Micromouse>(
+        std::make_unique<LambdaSensor>(
+            [this](const int fromR, const int fromC, const int toR,
+                   const int toC) {
+                return mazeGenerator->getMaze()->areCellsConnected(
+                    fromC, fromR, toC, toR);
+            }),
+        startPoint
+    );
+
+    switch (micromouseControllerType) {
+        case MicromouseControllerType::WallFollower:
+            micromouseController = std::make_unique<WallFollowerController>(micromouse, solutionPoint);
+            break;
+        case MicromouseControllerType::FloodFill:
+            micromouseController = std::make_unique<FloodFillMicromouseController>(micromouse, solutionPoint);
+            break;
+        default:
+            micromouseController = std::make_unique<WallFollowerController>(micromouse, solutionPoint);
+    }
+
+    this->micromouseController = std::move(micromouseController);
 }
 
 
 void Controller::setupStartEndPoint(SolutionPoint sp) {
     if (!mazeGenerator) return;
     const auto &mazeData = mazeGenerator->getMaze();
-    const auto rows = mazeData.size() - 1;
-    const auto cols = mazeData[0].size() - 1;
-    std::cout << rows << " " << cols << std::endl;
+    const auto rows = mazeData->getRowsCount() - 1;
+    const auto cols = mazeData->getColsCount() - 1;
+
     switch (sp) {
         case SolutionPoint::TOP_LEFT:
             solutionPoint = QPoint(0, 0);
@@ -119,14 +144,15 @@ void Controller::draw() const {
             .startPoint = startPoint,
             .solutionPoint = solutionPoint,
             .isFinished = mazeGenerator->isFinished(),
+            .visitedCoordinates = mazeGenerator->getVisitedCoordinates()
         };
     }
 
     if (micromouseController) {
         micromouseData = new MicrmouseVisualizationData{
-            .path = micromouseController->path(),
-            .currentOrientation = micromouseController->currentOrientation(),
-            .currentPosition = micromouseController->currentPosition(),
+            .path = micromouse->getPath(),
+            .currentOrientation = micromouse->getCurrentOrientation(),
+            .currentPosition = micromouse->getCurrentPosition(),
         };
     }
 

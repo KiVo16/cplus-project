@@ -802,6 +802,7 @@
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/initializer_list \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/ios \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/iosfwd \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/iostream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/istream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/iterator \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/limits \
@@ -937,12 +938,13 @@
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/limits.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/stdarg.h \
   /Users/jk/CLionProjects/untitled6/Controller.h \
-  /Users/jk/CLionProjects/untitled6/MazeGenerator/MazeGenerator.h \
-  /Users/jk/CLionProjects/untitled6/MicromouseController/MicromouseController.h \
-  /Users/jk/CLionProjects/untitled6/MicromouseController/Sensor/LambdaSensor.h \
-  /Users/jk/CLionProjects/untitled6/MicromouseController/Sensor/MicromouseSensor.h \
-  /Users/jk/CLionProjects/untitled6/Signal.h \
-  /Users/jk/CLionProjects/untitled6/Timer.h \
+  /Users/jk/CLionProjects/untitled6/Maze/Generator/MazeGenerator.h \
+  /Users/jk/CLionProjects/untitled6/Maze/Maze.h \
+  /Users/jk/CLionProjects/untitled6/Micromouse/Controller/MicromouseController.h \
+  /Users/jk/CLionProjects/untitled6/Micromouse/Micromouse.h \
+  /Users/jk/CLionProjects/untitled6/Micromouse/Sensor/MicromouseSensor.h \
+  /Users/jk/CLionProjects/untitled6/Utils/Signal.h \
+  /Users/jk/CLionProjects/untitled6/Utils/Timer.h \
   /Users/jk/CLionProjects/untitled6/Visualizer/QVisualizer.h \
   /Users/jk/CLionProjects/untitled6/Visualizer/Visualizer.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Versions/A/Headers/QPoint \
@@ -1099,15 +1101,20 @@
   /Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Versions/A/Headers/QComboBox \
   /Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Versions/A/Headers/QGraphicsScene \
   /Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Versions/A/Headers/QPushButton \
+  /Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Versions/A/Headers/QVBoxLayout \
   /Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Versions/A/Headers/QWidget \
   /Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Versions/A/Headers/qabstractbutton.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Versions/A/Headers/qabstractitemdelegate.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Versions/A/Headers/qabstractslider.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Versions/A/Headers/qabstractspinbox.h \
+  /Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Versions/A/Headers/qboxlayout.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Versions/A/Headers/qcheckbox.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Versions/A/Headers/qcombobox.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Versions/A/Headers/qframe.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Versions/A/Headers/qgraphicsscene.h \
+  /Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Versions/A/Headers/qgridlayout.h \
+  /Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Versions/A/Headers/qlayout.h \
+  /Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Versions/A/Headers/qlayoutitem.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Versions/A/Headers/qpushbutton.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Versions/A/Headers/qrubberband.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Versions/A/Headers/qsizepolicy.h \

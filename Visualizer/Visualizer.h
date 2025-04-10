@@ -1,18 +1,17 @@
-//
-// Created by Jakub Kurek on 08/04/2025.
-//
-
 #ifndef VISUALIZER_H
 #define VISUALIZER_H
-#include "../MazeGenerator/MazeGenerator.h"
-#include "../MicromouseController/MicromouseController.h"
+
+#include "../Maze/Maze.h"
+#include "../Maze/Generator/MazeGenerator.h"
+#include "../Micromouse/Micromouse.h"
 
 struct MazeGeneratorVisualizationData {
-  Maze maze;
+  const std::unique_ptr<Maze> &maze;
   QPoint current;
   QPoint startPoint;
   QPoint solutionPoint;
   bool isFinished;
+  VisitedCoordinates visitedCoordinates;
 };
 
 struct MicrmouseVisualizationData {
@@ -28,7 +27,13 @@ public:
 
   virtual ~Visualizer() = default;
 
-  virtual void draw(MazeGeneratorVisualizationData *mazeData, MicrmouseVisualizationData *micromouseData);
+  /**
+   * draws maze and micromouse based on provided data
+   * @param mazeData data used for maze visualization
+   * @param micromouseData data user for micromouse visualization
+   */
+  virtual void draw(MazeGeneratorVisualizationData *mazeData, MicrmouseVisualizationData *micromouseData) {
+  };
 };
 
 

@@ -925,10 +925,10 @@
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/__stdarg_va_list.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/limits.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/stdarg.h \
-  /Users/jk/CLionProjects/untitled6/MazeGenerator/MazeGenerator.h \
-  /Users/jk/CLionProjects/untitled6/MicromouseController/MicromouseController.h \
-  /Users/jk/CLionProjects/untitled6/MicromouseController/Sensor/LambdaSensor.h \
-  /Users/jk/CLionProjects/untitled6/MicromouseController/Sensor/MicromouseSensor.h \
+  /Users/jk/CLionProjects/untitled6/Maze/Generator/MazeGenerator.h \
+  /Users/jk/CLionProjects/untitled6/Maze/Maze.h \
+  /Users/jk/CLionProjects/untitled6/Micromouse/Micromouse.h \
+  /Users/jk/CLionProjects/untitled6/Micromouse/Sensor/MicromouseSensor.h \
   /Users/jk/CLionProjects/untitled6/Visualizer/Visualizer.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Versions/A/Headers/QPoint \
   /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Versions/A/Headers/q20functional.h \
@@ -1077,8 +1077,13 @@
   /Users/jk/Qt/6.8.2/macos/lib/QtGui.framework/Versions/A/Headers/qtransform.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtGui.framework/Versions/A/Headers/qwindowdefs.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Versions/A/Headers/QGraphicsScene \
+  /Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Versions/A/Headers/QVBoxLayout \
   /Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Versions/A/Headers/QWidget \
+  /Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Versions/A/Headers/qboxlayout.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Versions/A/Headers/qgraphicsscene.h \
+  /Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Versions/A/Headers/qgridlayout.h \
+  /Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Versions/A/Headers/qlayout.h \
+  /Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Versions/A/Headers/qlayoutitem.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Versions/A/Headers/qsizepolicy.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Versions/A/Headers/qtwidgets-config.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Versions/A/Headers/qtwidgetsexports.h \
