@@ -1,4 +1,4 @@
 /Users/jk/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Users/jk/Applications/CLion.app/Contents/bin/ninja/mac/aarch64/ninja -G Ninja -S /Users/jk/CLionProjects/untitled6 -B /Users/jk/CLionProjects/untitled6/cmake-build-debug
--- Configuring done (0.1s)
+-- Configuring done (0.2s)
 -- Generating done (0.1s)
 -- Build files have been written to: /Users/jk/CLionProjects/untitled6/cmake-build-debug

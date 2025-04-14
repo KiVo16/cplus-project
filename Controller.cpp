@@ -16,7 +16,7 @@ void Controller::setMazeSize(int size) {
     this->mazeSize = size;
 }
 
-void Controller::startMazeGeneration(const MazeGeneratorType mazeGeneratorType, const SolutionPoint sp) {
+void Controller::startMazeGeneration(const MazeGeneratorType mazeGeneratorType, const SolutionPointPosition sp) {
     setupMazeGenerator(mazeGeneratorType);
     setupStartEndPoint(sp);
     timerMaze->start([this]() { this->updateMaze(); }, std::chrono::milliseconds(5));
@@ -79,30 +79,30 @@ void Controller::setupMicromouse(const MicromouseControllerType micromouseContro
 }
 
 
-void Controller::setupStartEndPoint(SolutionPoint sp) {
+void Controller::setupStartEndPoint(SolutionPointPosition sp) {
     if (!mazeGenerator) return;
     const auto &mazeData = mazeGenerator->getMaze();
     const auto rows = mazeData->getRowsCount() - 1;
     const auto cols = mazeData->getColsCount() - 1;
 
     switch (sp) {
-        case SolutionPoint::TOP_LEFT:
+        case SolutionPointPosition::TOP_LEFT:
             solutionPoint = QPoint(0, 0);
             startPoint = QPoint(cols, rows);
             break;
-        case SolutionPoint::TOP_RIGHT:
+        case SolutionPointPosition::TOP_RIGHT:
             solutionPoint = QPoint(0, rows);
             startPoint = QPoint(cols, 0);
             break;
-        case SolutionPoint::BOTTOM_LEFT:
+        case SolutionPointPosition::BOTTOM_LEFT:
             solutionPoint = QPoint(cols, 0);
             startPoint = QPoint(0, rows);
             break;
-        case SolutionPoint::BOTTOM_RIGHT:
+        case SolutionPointPosition::BOTTOM_RIGHT:
             solutionPoint = QPoint(cols, rows);
             startPoint = QPoint(0, 0);
             break;
-        case SolutionPoint::CENTER:
+        case SolutionPointPosition::CENTER:
             solutionPoint = QPoint(cols / 2, rows / 2);
             startPoint = QPoint(0, 0);
             break;

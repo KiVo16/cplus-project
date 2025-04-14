@@ -4,24 +4,24 @@
 #include <functional>
 #include <vector>
 
-// Generic Signal class template that supports any argument signature.
+/// class for signals supporting any number of arguments
 template <typename... Args>
 class Signal {
 public:
-    // A slot is any callable that takes arguments of types Args...
+    /// callable that takes parameters of types Args
     using SlotType = std::function<void(Args...)>;
 
-    // Connect a new slot (callback) to this signal.
+    /// adds consumer callback function
     void connect(const SlotType &slot) {
         m_slots.push_back(slot);
     }
 
-    // Disconnect all connected slots.
+    /// clears all consumers
     void disconnectAll() {
         m_slots.clear();
     }
 
-    // Emit the signal by calling all connected slots with the given arguments.
+    /// sends signal to all consumers with provided arguments
     void emitSignal(Args... args) const {
         for (const auto &slot : m_slots) {
             if (slot)
@@ -29,13 +29,14 @@ public:
         }
     }
 
-    // Overload the function call operator for natural syntax.
+    /// () operator overload
     void operator()(Args... args) const {
         emitSignal(args...);
     }
 
 private:
-    std::vector<SlotType> m_slots;  // Renamed from 'slots' to 'm_slots'
+    /// vector storing all consumers
+    std::vector<SlotType> m_slots;
 };
 
 #endif // SIGNAL_H

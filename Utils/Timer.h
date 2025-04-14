@@ -13,7 +13,7 @@ public:
     /**
      * starts the timer
      * @param func anonymous function called in interval
-     * @param interval interval defines in miliseconds
+     * @param interval interval defines in milliseconds
      */
     void start(const std::function<void()> &func, std::chrono::milliseconds interval);
 

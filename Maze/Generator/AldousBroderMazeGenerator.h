@@ -7,7 +7,7 @@
 
 #include "MazeGenerator.h"
 
-
+/// maze generator based on Aldous Broder algorithm
 class AldousBroderMazeGenerator final : public MazeGenerator {
 public:
     AldousBroderMazeGenerator(int rows, int cols);

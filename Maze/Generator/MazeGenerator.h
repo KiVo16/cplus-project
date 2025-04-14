@@ -13,6 +13,7 @@ enum Direction { UP = 0, RIGHT = 1, DOWN = 2, LEFT = 3 };
 
 typedef std::map<std::tuple<int, int>, bool> VisitedCoordinates;
 
+/// class generating maze
 class MazeGenerator {
 public:
     MazeGenerator(int rows, int cols);
@@ -89,6 +90,7 @@ protected:
     size_t countVisitedCells() const;
 
 private:
+    /// visited coordinates map
     VisitedCoordinates visitedCoordinates = {};
 };
 
