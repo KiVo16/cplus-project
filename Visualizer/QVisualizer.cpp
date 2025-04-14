@@ -4,9 +4,12 @@
 #include <QVBoxLayout>
 #include <QPainterPath>
 
+#include "QMaze.h"
+
 QVisualizer::QVisualizer(QWidget *parent)
     : QWidget(parent), cellSize(20) {
     scene = new QGraphicsScene(this);
+    scene->setItemIndexMethod(QGraphicsScene::NoIndex);
     view = new QGraphicsView(scene, this);
     layout = new QVBoxLayout(this);
     wallPen = new QPen(Qt::black);
@@ -24,84 +27,40 @@ void QVisualizer::draw(MazeGeneratorVisualizationData *mazeData, MicrmouseVisual
 
 void QVisualizer::drawMaze(const MazeGeneratorVisualizationData &d) const {
     if (!d.maze) return;
-    auto rows = d.maze->getRowsCount();
-    auto cols = d.maze->getColsCount();
-
-    for (int i = 0; i < rows; ++i) {
-        for (int j = 0; j < cols; ++j) {
-            int x = j * cellSize;
-            int y = i * cellSize;
-            auto cell = d.maze->getCell(i, j);
-            if (!cell) continue;
-            QPoint currentPoint(i, j);
-            QColor cellColor = Qt::white;
-
-            if (d.visitedCoordinates.contains(std::make_pair(i, j))) cellColor = QColor(200, 200, 255);
-            if (d.current == currentPoint && !d.isFinished) cellColor = QColor(100, 255, 100);
-            if (d.startPoint == currentPoint) cellColor = QColor(153, 221, 231);
-            if (d.solutionPoint == currentPoint) cellColor = QColor(255, 0, 0);
-
-            scene->addRect(x, y, cellSize, cellSize, QPen(Qt::NoPen), QBrush(cellColor));
-
-            if (cell->walls[0])
-                scene->addLine(x, y, x + cellSize, y, *wallPen);
-            if (cell->walls[1])
-                scene->addLine(x + cellSize, y, x + cellSize, y + cellSize, *wallPen);
-            if (cell->walls[2])
-                scene->addLine(x, y + cellSize, x + cellSize, y + cellSize, *wallPen);
-            if (cell->walls[3])
-                scene->addLine(x, y, x, y + cellSize, *wallPen);
-        }
-    }
+    scene->addItem(new QMaze(d, cellSize));
 }
 
 void QVisualizer::drawMicromouse(const MicrmouseVisualizationData &d) const {
-    QPoint micromousePos = d.currentPosition;
-    std::vector<MicrmouseStep> micromousePath = d.path;
-    if (!micromousePath.empty()) {
+    if (!d.path.empty()) {
         QPainterPath mousePath;
-        mousePath.moveTo(micromousePath[0].pos.y() * cellSize + cellSize / 2,
-                         micromousePath[0].pos.x() * cellSize + cellSize / 2);
-        for (size_t i = 1; i < micromousePath.size(); ++i) {
-            mousePath.lineTo(micromousePath[i].pos.y() * cellSize + cellSize / 2,
-                             micromousePath[i].pos.x() * cellSize + cellSize / 2);
+        mousePath.moveTo(d.path[0].pos.y() * cellSize + cellSize / 2,
+                         d.path[0].pos.x() * cellSize + cellSize / 2);
+        for (size_t i = 1; i < d.path.size(); ++i) {
+            mousePath.lineTo(d.path[i].pos.y() * cellSize + cellSize / 2,
+                             d.path[i].pos.x() * cellSize + cellSize / 2);
         }
         QPen mousePathPen(Qt::darkGreen);
         mousePathPen.setWidth(2);
         scene->addPath(mousePath, mousePathPen);
     }
 
+    if (d.currentPosition == QPoint(-1, -1)) return;
+    const int cx = d.currentPosition.y() * cellSize;
+    const int cy = d.currentPosition.x() * cellSize;
 
-    int currentMouseOrientation = d.currentOrientation;
-    if (micromousePos != QPoint(-1, -1)) {
-        const int cx = micromousePos.y() * cellSize;
-        const int cy = micromousePos.x() * cellSize;
-        QPolygonF triangle;
-        triangle << QPointF(cx + cellSize / 2.0, cy + cellSize / 4.0) // Tip
-                << QPointF(cx + cellSize / 4.0, cy + 3 * cellSize / 4.0) // Bottom left
-                << QPointF(cx + 3 * cellSize / 4.0, cy + 3 * cellSize / 4.0); // Bottom right
-        // Rotate the triangle based on current orientation.
-        QPointF center(cx + cellSize / 2.0, cy + cellSize / 2.0);
-        double angle = 0.0;
-        switch (currentMouseOrientation) {
-            case 0: angle = 0.0;
-                break;
-            case 1: angle = 90.0;
-                break;
-            case 2: angle = 180.0;
-                break;
-            case 3: angle = 270.0;
-                break;
-            default: angle = 0.0;
-                break;
-        }
-        QTransform transform;
-        transform.translate(center.x(), center.y());
-        transform.rotate(angle);
-        transform.translate(-center.x(), -center.y());
-        const QPolygonF rotatedTriangle = transform.map(triangle);
-        const QPen mousePen(Qt::blue);
-        const QBrush mouseBrush(Qt::blue);
-        scene->addPolygon(rotatedTriangle, mousePen, mouseBrush);
-    }
+    QPolygonF triangle{
+        QPointF(cx + cellSize / 2.0, cy + cellSize / 4.0),
+        QPointF(cx + cellSize / 4.0, cy + 3 * cellSize / 4.0),
+        QPointF(cx + 3 * cellSize / 4.0, cy + 3 * cellSize / 4.0)
+    };
+
+    QPointF center(cx + cellSize / 2.0, cy + cellSize / 2.0);
+    double angle = d.currentOrientation * 90.0;
+
+    QTransform transform;
+    transform.translate(center.x(), center.y());
+    transform.rotate(angle);
+    transform.translate(-center.x(), -center.y());
+
+    scene->addPolygon(transform.map(triangle), QPen(Qt::blue), QBrush(Qt::blue));
 }

@@ -54,6 +54,12 @@ public:
     */
     void skipMazeGenerationVisualisation() const;
 
+    /**
+     * maze size setter
+     * @param size maze size
+    */
+    void setMazeSize(int size);
+
     /// signal used to communicate events like MAZE_GENERATION_FINISHED and MICROMOUSE_FINISHED
     Signal<ControllerSignal> signal;
 private:
@@ -80,6 +86,8 @@ private:
 
     /// injected micromouse controller
     std::unique_ptr<MicromouseController> micromouseController = nullptr;
+
+    int mazeSize = 20;
 
     /**
      * triggers single step in maze generator

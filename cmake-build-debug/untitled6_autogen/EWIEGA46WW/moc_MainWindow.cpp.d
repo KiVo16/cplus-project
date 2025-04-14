@@ -994,6 +994,7 @@
   /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Versions/A/Headers/qglobalstatic.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Versions/A/Headers/qhash.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Versions/A/Headers/qhashfunctions.h \
+  /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Versions/A/Headers/qiodevice.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Versions/A/Headers/qiodevicebase.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Versions/A/Headers/qiterable.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Versions/A/Headers/qiterator.h \
@@ -1065,6 +1066,7 @@
   /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Versions/A/Headers/qtversionchecks.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Versions/A/Headers/qtypeinfo.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Versions/A/Headers/qtypes.h \
+  /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Versions/A/Headers/qurl.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Versions/A/Headers/qutf8stringview.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Versions/A/Headers/qvariant.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtCore.framework/Versions/A/Headers/qvarlengtharray.h \
@@ -1085,12 +1087,14 @@
   /Users/jk/Qt/6.8.2/macos/lib/QtGui.framework/Versions/A/Headers/qpaintdevice.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtGui.framework/Versions/A/Headers/qpalette.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtGui.framework/Versions/A/Headers/qpen.h \
+  /Users/jk/Qt/6.8.2/macos/lib/QtGui.framework/Versions/A/Headers/qpicture.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtGui.framework/Versions/A/Headers/qpixelformat.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtGui.framework/Versions/A/Headers/qpixmap.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtGui.framework/Versions/A/Headers/qpolygon.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtGui.framework/Versions/A/Headers/qregion.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtGui.framework/Versions/A/Headers/qrgb.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtGui.framework/Versions/A/Headers/qrgba64.h \
+  /Users/jk/Qt/6.8.2/macos/lib/QtGui.framework/Versions/A/Headers/qtextdocument.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtGui.framework/Versions/A/Headers/qtgui-config.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtGui.framework/Versions/A/Headers/qtguiexports.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtGui.framework/Versions/A/Headers/qtguiglobal.h \
@@ -1100,6 +1104,7 @@
   /Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Versions/A/Headers/QCheckBox \
   /Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Versions/A/Headers/QComboBox \
   /Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Versions/A/Headers/QGraphicsScene \
+  /Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Versions/A/Headers/QLabel \
   /Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Versions/A/Headers/QPushButton \
   /Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Versions/A/Headers/QVBoxLayout \
   /Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Versions/A/Headers/QWidget \
@@ -1113,6 +1118,7 @@
   /Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Versions/A/Headers/qframe.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Versions/A/Headers/qgraphicsscene.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Versions/A/Headers/qgridlayout.h \
+  /Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Versions/A/Headers/qlabel.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Versions/A/Headers/qlayout.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Versions/A/Headers/qlayoutitem.h \
   /Users/jk/Qt/6.8.2/macos/lib/QtWidgets.framework/Versions/A/Headers/qpushbutton.h \

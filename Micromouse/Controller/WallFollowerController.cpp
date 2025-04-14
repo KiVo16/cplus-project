@@ -4,51 +4,38 @@
 
 void WallFollowerController::step() {
     if (finished) return;
-    auto orientation = micromouse->getCurrentOrientation();
-    auto pos = micromouse->getCurrentPosition();
-    auto pathTaken = micromouse->getPath();
 
-    auto turnLeft = [&]() { micromouse->rotate((orientation + 3) % 4); };
-    auto turnRight = [&]() { micromouse->rotate((orientation + 1) % 4); };
+    const int dx[4] = {-1, 0, 1, 0};
+    const int dy[4] = {0, 1, 0, -1};
 
-    // compute left orientation
-    int leftOrient = (orientation + 3) % 4;
+    int currentOrientation = micromouse->getCurrentOrientation();
+    QPoint pos = micromouse->getCurrentPosition();
 
-    // figure out neighbor coords
-    auto offset = [&](int orient) {
-        switch (orient) {
-            case 0: return QPoint(-1, 0); // north
-            case 1: return QPoint(0, 1); // east
-            case 2: return QPoint(1, 0); // south
-            case 3: return QPoint(0, -1); // west
+    int order[4] = { (currentOrientation + 3) % 4,
+                     currentOrientation,
+                     (currentOrientation + 1) % 4,
+                     (currentOrientation + 2) % 4 };
+
+    int chosenDir = -1;
+    QPoint newPos;
+
+    for (int i = 0; i < 4; ++i) {
+        int dir = order[i];
+        newPos = QPoint(pos.x() + dx[dir], pos.y() + dy[dir]);
+        if (micromouse->getSensor()->canMove(pos.x(), pos.y(), newPos.x(), newPos.y())) {
+            chosenDir = dir;
+            break;
         }
-        return QPoint(0, 0);
-    };
-    QPoint leftOff = offset(leftOrient);
-    QPoint frontOff = offset(orientation);
+    }
 
-    QPoint leftCell = pos + leftOff;
-    QPoint frontCell = pos + frontOff;
-    // pathTaken.push_back({
-    //     pos, orientation
-    // });
-    bool moved = false;
-    // if left open, turn left & move
-    if (micromouse->getSensor()->canMove(pos.x(), pos.y(), leftCell.x(), leftCell.y())) {
-        turnLeft();
-        pos = leftCell;
-        moved = true;
-    }
-    // else if front open, move forward
-    else if (micromouse->getSensor()->canMove(pos.x(), pos.y(), frontCell.x(), frontCell.y())) {
-        pos = frontCell;
-        moved = true;
-    } else {
-        // turn right
-        turnRight();
-    }
-    if (moved) micromouse->move(pos.x(), pos.y());
-    if (pos == goal) {
+    if (chosenDir == -1)
+        return;
+
+    if (chosenDir != currentOrientation)
+        micromouse->rotate(chosenDir);
+
+    micromouse->move(newPos.x(), newPos.y());
+
+    if (newPos == goal)
         finished = true;
-    }
 }

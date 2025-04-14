@@ -25,7 +25,6 @@ const std::unique_ptr<MicromouseSensor> &Micromouse::getSensor() const {
 }
 
 void Micromouse::move(int x, int y) {
-    std::cout << "Micromouse::move()" << std::endl;
     pos = QPoint(x, y);
     path.push_back({
         pos,
