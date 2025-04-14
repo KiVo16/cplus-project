@@ -8,7 +8,7 @@
 #include "Micromouse/Controller/MicromouseController.h"
 #include "Visualizer/Visualizer.h"
 
-enum class SolutionPoint {
+enum class SolutionPointPosition {
     TOP_LEFT,
     TOP_RIGHT,
     BOTTOM_LEFT,
@@ -16,6 +16,7 @@ enum class SolutionPoint {
     CENTER
 };
 
+/// event signals
 enum class ControllerSignal {
     MAZE_GENERATION_FINISHED,
     MICROMOUSE_FINISHED,
@@ -32,6 +33,10 @@ enum class MicromouseControllerType {
     WallFollower
 };
 
+/**
+ * controller class used for setting up maze and micromouse related classes.
+ * Responsible for progressing maze generation and micromouse solution finding.
+ */
 class Controller {
 public:
     explicit Controller(Visualizer *visualizer);
@@ -41,7 +46,7 @@ public:
      * @param mazeGeneratorType type of maze generator
      * @param point maze solution point.
      */
-    void startMazeGeneration(MazeGeneratorType mazeGeneratorType, SolutionPoint point);
+    void startMazeGeneration(MazeGeneratorType mazeGeneratorType, SolutionPointPosition point);
 
     /**
      * sets up micromouse controller and start path finding
@@ -62,6 +67,7 @@ public:
 
     /// signal used to communicate events like MAZE_GENERATION_FINISHED and MICROMOUSE_FINISHED
     Signal<ControllerSignal> signal;
+
 private:
     /// micromouse object controlled by micromouse controller
     std::unique_ptr<Micromouse> micromouse;
@@ -87,6 +93,7 @@ private:
     /// injected micromouse controller
     std::unique_ptr<MicromouseController> micromouseController = nullptr;
 
+    /// maze size, e.g. 20x20 cells
     int mazeSize = 20;
 
     /**
@@ -102,7 +109,7 @@ private:
     /**
      * sets up starting point and maze solution point
     */
-    void setupStartEndPoint(SolutionPoint point);
+    void setupStartEndPoint(SolutionPointPosition point);
 
     /**
      * uses Visualizer to draw scene
@@ -120,10 +127,7 @@ private:
      * @param micromouseControllerType type of micromouse controller
      */
     void setupMicromouse(MicromouseControllerType micromouseControllerType);
-
-
 };
-
 
 
 #endif //CONTROLLER_H

@@ -98,13 +98,13 @@ void MainWindow::startMazeGeneration() const {
     skipMazeGenerationVisualizationButton->setVisible(false);
 }
 
-SolutionPoint MainWindow::determineSolutionPoint() const {
+SolutionPointPosition MainWindow::determineSolutionPoint() const {
     QString solChoice = solutionCombo->currentText();
-    if (solChoice == "Top Left") return SolutionPoint::TOP_LEFT;
-    if (solChoice == "Top Right") return SolutionPoint::TOP_RIGHT;
-    if (solChoice == "Bottom Left") return SolutionPoint::BOTTOM_LEFT;
-    if (solChoice == "Bottom Right") return SolutionPoint::BOTTOM_RIGHT;
-    return SolutionPoint::CENTER;
+    if (solChoice == "Top Left") return SolutionPointPosition::TOP_LEFT;
+    if (solChoice == "Top Right") return SolutionPointPosition::TOP_RIGHT;
+    if (solChoice == "Bottom Left") return SolutionPointPosition::BOTTOM_LEFT;
+    if (solChoice == "Bottom Right") return SolutionPointPosition::BOTTOM_RIGHT;
+    return SolutionPointPosition::CENTER;
 }
 
 MazeGeneratorType MainWindow::determineMazeGenerator() const {

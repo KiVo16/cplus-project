@@ -12,6 +12,7 @@
 #include "Micromouse/Controller/MicromouseController.h"
 #include "Visualizer/QVisualizer.h"
 
+/// Main window of the application
 class MainWindow : public QWidget {
     Q_OBJECT
 public:
@@ -39,13 +40,17 @@ private:
     QSlider *mazeSizeSlider;
     QLabel *mazeSizeLabel;
 
-
+    /**
+     * event handler for changing maze size
+     * @param size maze size
+    */
     void onMazeSizeChanged(int size) const;
 
     /**
      * picks solution point position based on combobox
+     * @return solution point position
     */
-    SolutionPoint determineSolutionPoint() const;
+    SolutionPointPosition determineSolutionPoint() const;
 
     /**
      * defines appropriate maze generator type based on combobox
