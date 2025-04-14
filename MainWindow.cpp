@@ -10,15 +10,25 @@ MainWindow::MainWindow(QWidget *parent) : QWidget(parent) {
     visualizer = new QVisualizer(this);
     controller = new Controller(visualizer);
 
+    mazeAlgoComboLabel = new QLabel("Maze generator", this);
     mazeAlgoCombo = new QComboBox(this);
     mazeAlgoCombo->addItem("Recursive Backtracker");
     mazeAlgoCombo->addItem("Prim's Algorithm");
     mazeAlgoCombo->addItem("Aldous–Broder Algorithm");
 
+    mazeSizeLabel = new QLabel("Maze Size: 20", this);
+    mazeSizeSlider = new QSlider(Qt::Horizontal, this);
+    mazeSizeSlider->setMinimum(20);
+    mazeSizeSlider->setMaximum(100);
+    mazeSizeSlider->setValue(20);
+    connect(mazeSizeSlider, &QSlider::valueChanged, this, &MainWindow::onMazeSizeChanged);
+
+    mouseAlgoComboLabel = new QLabel("Micromouse controller", this);\
     mouseAlgoCombo = new QComboBox(this);
-    mouseAlgoCombo->addItem("Left-Hand Rule");
+    mouseAlgoCombo->addItem("Wall following");
     mouseAlgoCombo->addItem("Flood Fill");
 
+    solutionComboLabel = new QLabel("Solution position", this);
     solutionCombo = new QComboBox(this);
     solutionCombo->addItem("Top Left");
     solutionCombo->addItem("Top Right");
@@ -41,13 +51,19 @@ MainWindow::MainWindow(QWidget *parent) : QWidget(parent) {
     startMouseButton->setEnabled(false);
     connect(startMouseButton, &QPushButton::clicked, this, &MainWindow::startMicromouseSimulation);
 
-    auto *layout = new QVBoxLayout(this);
+    layout = new QVBoxLayout(this);
+    layout->addWidget(mazeAlgoComboLabel);
     layout->addWidget(mazeAlgoCombo);
+    layout->addWidget(mazeSizeLabel);
+    layout->addWidget(mazeSizeSlider);
+    layout->addWidget(solutionComboLabel);
     layout->addWidget(solutionCombo);
-    layout->addWidget(mouseAlgoCombo);
     layout->addWidget(visualizeCheck);
     layout->addWidget(startMazeButton);
     layout->addWidget(skipMazeGenerationVisualizationButton);
+
+    layout->addWidget(mouseAlgoComboLabel);
+    layout->addWidget(mouseAlgoCombo);
     layout->addWidget(startMouseButton);
     layout->addWidget(visualizer);
     setLayout(layout);
@@ -61,6 +77,11 @@ MainWindow::MainWindow(QWidget *parent) : QWidget(parent) {
                 startMouseButton->setEnabled(true);
         }
     });
+}
+
+void MainWindow::onMazeSizeChanged(int size) const {
+    mazeSizeLabel->setText(QString("Maze Size: %1").arg(size));
+    controller->setMazeSize(size);
 }
 
 void MainWindow::startMazeGeneration() const {
@@ -95,7 +116,7 @@ MazeGeneratorType MainWindow::determineMazeGenerator() const {
 
 MicromouseControllerType MainWindow::determineMicromouseController() const {
     QString solChoice = mouseAlgoCombo->currentText();
-    if (solChoice == "Left-Hand Rule") return MicromouseControllerType::WallFollower;
+    if (solChoice == "Wall following") return MicromouseControllerType::WallFollower;
     if (solChoice == "Flood Fill") return MicromouseControllerType::FloodFill;
     return MicromouseControllerType::WallFollower;
 }

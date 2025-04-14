@@ -5,6 +5,7 @@
 #include <QPushButton>
 #include <QComboBox>
 #include <QCheckBox>
+#include <QLabel>
 
 #include "Controller.h"
 #include "Maze/Generator/MazeGenerator.h"
@@ -18,13 +19,28 @@ public:
 private:
     Controller *controller;
     QVisualizer *visualizer;
+
+    QLayout *layout;
+
+    QLabel *mazeAlgoComboLabel;
     QComboBox *mazeAlgoCombo;
+
+    QLabel *mouseAlgoComboLabel;
     QComboBox *mouseAlgoCombo;
+
+    QLabel *solutionComboLabel;
     QComboBox *solutionCombo;
+
     QCheckBox *visualizeCheck;
     QPushButton *startMazeButton;
     QPushButton *skipMazeGenerationVisualizationButton;
     QPushButton *startMouseButton;
+
+    QSlider *mazeSizeSlider;
+    QLabel *mazeSizeLabel;
+
+
+    void onMazeSizeChanged(int size) const;
 
     /**
      * picks solution point position based on combobox

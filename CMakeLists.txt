@@ -49,6 +49,8 @@ add_executable(untitled6 main.cpp
         Micromouse/Sensor/LambdaSensor.h
         Maze/Maze.cpp
         Maze/Maze.h
+        Visualizer/QMaze.cpp
+        Visualizer/QMaze.h
 )
 target_link_libraries(untitled6
   Qt::Core

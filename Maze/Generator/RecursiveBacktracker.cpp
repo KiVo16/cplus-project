@@ -1,4 +1,7 @@
 #include "RecursiveBacktracker.h"
+
+#include <iostream>
+#include <ostream>
 #include <QPoint>
 
 RecursiveBacktracker::RecursiveBacktracker(const int rows, const int cols)

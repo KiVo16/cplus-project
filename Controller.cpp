@@ -12,6 +12,10 @@ Controller::Controller(Visualizer *visualizer)
     : visualizer(visualizer), timerMaze(new Timer()), timerMicroMouse(new Timer()) {
 }
 
+void Controller::setMazeSize(int size) {
+    this->mazeSize = size;
+}
+
 void Controller::startMazeGeneration(const MazeGeneratorType mazeGeneratorType, const SolutionPoint sp) {
     setupMazeGenerator(mazeGeneratorType);
     setupStartEndPoint(sp);
@@ -21,8 +25,8 @@ void Controller::startMazeGeneration(const MazeGeneratorType mazeGeneratorType, 
 
 void Controller::setupMazeGenerator(const MazeGeneratorType mazeGeneratorType) {
     std::unique_ptr<MazeGenerator> mazeGenerator = nullptr;
-    constexpr int rows = 20;
-    constexpr int cols = 20;
+    const int rows = mazeSize;
+    const int cols = mazeSize;
     switch (mazeGeneratorType) {
         case MazeGeneratorType::AldousBroder:
             mazeGenerator = std::make_unique<AldousBroderMazeGenerator>(rows, cols);
@@ -65,7 +69,7 @@ void Controller::setupMicromouse(const MicromouseControllerType micromouseContro
             micromouseController = std::make_unique<WallFollowerController>(micromouse, solutionPoint);
             break;
         case MicromouseControllerType::FloodFill:
-            micromouseController = std::make_unique<FloodFillMicromouseController>(micromouse, solutionPoint);
+            micromouseController = std::make_unique<FloodFillMicromouseController>(micromouse, solutionPoint, mazeSize);
             break;
         default:
             micromouseController = std::make_unique<WallFollowerController>(micromouse, solutionPoint);

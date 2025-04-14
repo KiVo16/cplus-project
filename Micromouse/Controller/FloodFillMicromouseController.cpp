@@ -1,42 +1,70 @@
 #include "FloodFillMicromouseController.h"
 #include <cmath>
 
+const int INF = 100000;
 
 void FloodFillMicromouseController::step() {
     if (finished) return;
-    auto orientation = micromouse->getCurrentOrientation();
-    auto pos = micromouse->getCurrentPosition();
-    auto pathTaken = micromouse->getPath();
+    std::vector<std::vector<int> > cost(mazeSize, std::vector<int>(mazeSize, INF));
 
-    // Simple approach: pick a neighbor that reduces manhattan distance to goal
-    // if multiple neighbors reduce distance, pick one arbitrarily
-    int curDist = std::abs(pos.x() - goal.x()) + std::abs(pos.y() - goal.y());
-    int bestDir = -1;
-    int bestVal = curDist;
-    // directions: 0=north,1=east,2=south,3=west
+    auto isValid = [this](const int r, const int c) {
+        return r >= 0 && r < mazeSize && c >= 0 && c < mazeSize;
+    };
+
+    int goalRow = goal.x();
+    int goalCol = goal.y();
+    cost[goalRow][goalCol] = 0;
+
+    std::queue<QPoint> q;
+    q.push(QPoint(goalRow, goalCol));
+
     const int dx[4] = {-1, 0, 1, 0};
     const int dy[4] = {0, 1, 0, -1};
+
+    while (!q.empty()) {
+        QPoint cur = q.front();
+        q.pop();
+        int curCost = cost[cur.x()][cur.y()];
+        for (int d = 0; d < 4; ++d) {
+            int nx = cur.x() + dx[d];
+            int ny = cur.y() + dy[d];
+            if (
+                isValid(nx, ny) &&
+                micromouse->getSensor()->canMove(cur.x(), cur.y(), nx, ny) &&
+                curCost + 1 < cost[nx][ny]
+            ) {
+                cost[nx][ny] = curCost + 1;
+                q.push(QPoint(nx, ny));
+            }
+        }
+    }
+
+    QPoint pos = micromouse->getCurrentPosition();
+    int bestCost = INF;
+    int bestDir = -1;
     for (int d = 0; d < 4; ++d) {
-        int rr = pos.x() + dx[d];
-        int cc = pos.y() + dy[d];
-        if (micromouse->getSensor()->canMove(pos.x(), pos.y(), rr, cc)) {
-            int dist2 = std::abs(rr - goal.x()) + std::abs(cc - goal.y());
-            if (dist2 < bestVal) {
-                bestVal = dist2;
+        int nx = pos.x() + dx[d];
+        int ny = pos.y() + dy[d];
+        if (
+            isValid(nx, ny) &&
+            micromouse->getSensor()->canMove(pos.x(), pos.y(), nx, ny)
+        ) {
+            if (cost[nx][ny] < bestCost) {
+                bestCost = cost[nx][ny];
                 bestDir = d;
             }
         }
     }
-    if (bestDir != -1) {
-        orientation = bestDir;
-        pos = QPoint(pos.x() + dx[bestDir], pos.y() + dy[bestDir]);
-        micromouse->rotate(orientation);
-        micromouse->move(pos.x(), pos.y());
-    } else {
-        // If no improvement, just turn right
-        orientation = (orientation + 1) % 4;
-        micromouse->rotate(orientation);
-    }
 
-    if (pos == goal) finished = true;
+    if (bestDir != -1) {
+        int newX = pos.x() + dx[bestDir];
+        int newY = pos.y() + dy[bestDir];
+
+        micromouse->rotate(bestDir);
+        micromouse->move(newX, newY);
+
+        if (newX == goalRow && newY == goalCol) finished = true;
+    } else {
+        micromouse->rotate((micromouse->getCurrentOrientation() + 1) % 4);
+    }
 }
