@@ -27,6 +27,7 @@ MainWindow::MainWindow(QWidget *parent) : QWidget(parent) {
     mouseAlgoCombo = new QComboBox(this);
     mouseAlgoCombo->addItem("Wall following");
     mouseAlgoCombo->addItem("Flood Fill");
+    mouseAlgoCombo->addItem("Random");
 
     solutionComboLabel = new QLabel("Solution position", this);
     solutionCombo = new QComboBox(this);
@@ -118,6 +119,7 @@ MicromouseControllerType MainWindow::determineMicromouseController() const {
     QString solChoice = mouseAlgoCombo->currentText();
     if (solChoice == "Wall following") return MicromouseControllerType::WallFollower;
     if (solChoice == "Flood Fill") return MicromouseControllerType::FloodFill;
+    if (solChoice == "Random") return MicromouseControllerType::Random;
     return MicromouseControllerType::WallFollower;
 }
 

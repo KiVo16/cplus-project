@@ -30,7 +30,8 @@ enum class MazeGeneratorType {
 
 enum class MicromouseControllerType {
     FloodFill,
-    WallFollower
+    WallFollower,
+    Random
 };
 
 /**

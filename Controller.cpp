@@ -4,6 +4,7 @@
 #include "Maze/Generator/PrimsMazeGenerator.h"
 #include "Maze/Generator/RecursiveBacktracker.h"
 #include "Micromouse/Controller/FloodFillMicromouseController.h"
+#include "Micromouse/Controller/RandomController.h"
 #include "Micromouse/Controller/WallFollowerController.h"
 #include "Micromouse/Sensor/LambdaSensor.h"
 #include "Visualizer/Visualizer.h"
@@ -70,6 +71,9 @@ void Controller::setupMicromouse(const MicromouseControllerType micromouseContro
             break;
         case MicromouseControllerType::FloodFill:
             micromouseController = std::make_unique<FloodFillMicromouseController>(micromouse, solutionPoint, mazeSize);
+            break;
+        case MicromouseControllerType::Random:
+            micromouseController = std::make_unique<RandomController>(micromouse, solutionPoint);
             break;
         default:
             micromouseController = std::make_unique<WallFollowerController>(micromouse, solutionPoint);
