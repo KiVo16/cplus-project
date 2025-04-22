@@ -406,6 +406,12 @@
 			null
 		],
 		[
+			"/Users/jk/CLionProjects/untitled6/Micromouse/Controller/RandomController.h",
+			"MU",
+			"TSVCPB7DAZ/moc_RandomController.cpp",
+			null
+		],
+		[
 			"/Users/jk/CLionProjects/untitled6/Micromouse/Controller/WallFollowerController.h",
 			"MU",
 			"TSVCPB7DAZ/moc_WallFollowerController.cpp",
@@ -549,6 +555,11 @@
 		],
 		[
 			"/Users/jk/CLionProjects/untitled6/Micromouse/Controller/MicromouseController.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/jk/CLionProjects/untitled6/Micromouse/Controller/RandomController.cpp",
 			"MU",
 			null
 		],

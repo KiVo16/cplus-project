@@ -31,6 +31,8 @@ add_executable(untitled6 main.cpp
         Micromouse/Controller/WallFollowerController.h
         Micromouse/Controller/FloodFillMicromouseController.cpp
         Micromouse/Controller/FloodFillMicromouseController.h
+        Micromouse/Controller/RandomController.cpp
+        Micromouse/Controller/RandomController.h
         Visualizer/Visualizer.cpp
         Visualizer/Visualizer.h
         Visualizer/QVisualizer.cpp
